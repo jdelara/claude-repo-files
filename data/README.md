@@ -7,11 +7,8 @@ data/mined.db
 ```
 
 The database is not stored in Git because it is 1,198,850,048 bytes (about
-1.20 GB). It will be archived on Zenodo. Until the archive is public, obtain
-the same file from the authors' private server.
+1.20 GB). It can be downloaded from [here](https://miso.es/claude-repo-files/mined.db).
 
-- Zenodo record: `TO BE ADDED`
-- Temporary private download: `TO BE ADDED`
 - SHA-256: `29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442`
 - Observation interval: 14 July 2026 18:09:05 UTC to 23 July 2026 17:50:14 UTC
 - SQLite library used for the reported analyses: 3.49.1

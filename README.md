@@ -10,8 +10,7 @@ file-size results and figure, Markdown section and list analysis, natural and
 fenced-language results, diagram counts, repository placement, references,
 imports, repeated content, and `AGENTS.md` compatibility analysis.
 
-The 1.20 GB SQLite database is distributed separately. It will be placed on
-Zenodo; a private download can be used until that record is available. The
+The 1.20 GB SQLite database is distributed separately from [here](https://miso.es/claude-repo-files/mined.db). The
 analysis scripts open the database read-only and write their results under
 `results/`.
 
@@ -136,10 +135,6 @@ Download the database described in `data/README.md` and save it as:
 ```text
 data/mined.db
 ```
-
-The archive links are placeholders until the Zenodo deposit or temporary
-private download is supplied. Do not use a newly collected database if the
-goal is to reproduce the paper's numbers.
 
 ### 3. Verify the database
 
@@ -432,6 +427,4 @@ Different parts of this replication package have different licenses:
 See [DATA_LICENSE.md](DATA_LICENSE.md) for the complete scope statement,
 attribution request, and third-party-material notice.
 
-Before making this repository public, also replace the placeholder Zenodo and
-private-server links in `data/README.md` and add the final paper citation or DOI
-to `CITATION.cff`.
+
