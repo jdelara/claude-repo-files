@@ -58,65 +58,26 @@ repository can contain both an exact name and a non-exact query match.
 
 ## How does the dataset compare with GitHub's search results?
 
-We wanted to get a broad sense of how much of the material visible through
-GitHub search is represented in our frozen dataset. To make this comparison,
-we divided the file-size range into consecutive intervals of 200 bytes and
-asked GitHub how many results it found in each interval. These count-only
-queries were collected in July 2026. We then counted the files of the same
+Our dataset aims at giving a representive picture of the material publicly
+available in GitHub in July 2026. To compare database content with GitHub
+content, we divided the file-size range into consecutive intervals of 200 
+bytes and asked GitHub how many results it found in each interval. 
+We then counted the files of the same
 sizes in the frozen database.
 
 Across all size intervals, GitHub reported 218,027 results. The database
 contains 108,764 files whose basename is exactly `CLAUDE.md`, ignoring letter
 case. The difference between these totals is 109,263 files, which is 50.11% of
-the GitHub total. This does not mean that we can identify 109,263 particular
-files that are missing. It simply means that the two sets of counts differ by
-that amount.
+the GitHub total.
 
-The first figure shows where the two totals come from. Each narrow bar
+The nextt figure shows where the two totals come from. Each bar
 represents a 200-byte file-size interval. The horizontal axis shows file size
-and the vertical axis shows the number of results. The vertical axis uses a
-logarithmic scale so that the much smaller counts for large files remain
-visible. The two distributions have a broadly similar shape, but the database
-count is lower in many of the intervals where most files occur.
+and the vertical axis (logarithmic) shows the number of results. The two 
+distributions have a broadly similar shape. Most of the difference occurs among files of ordinary size rather than among
+the very largest files. Half of the summed difference appears at or
+below 14.4 KB.
 
 ![GitHub indexed matches and files in the frozen database by file size](figures/github_claude_size_histogram.png)
-
-The second figure looks directly at the difference between the two counts. For
-each 200-byte size interval, we subtract the number of database files from the
-GitHub count. If the database contains more files in an interval, we show the
-difference as zero rather than as a negative value. For readability, the
-figure combines ten adjacent intervals into 2 KB groups. The upper panel shows
-the resulting count difference, while the lower panel expresses the same
-difference as a percentage of the GitHub count.
-
-![Estimated positive count gap and gap rate by file size](figures/github_claude_size_loss.png)
-
-Adding only these positive differences gives 123,441 files. The average
-positive difference, weighted by the number of GitHub results in each
-interval, is 56.62%. Weighting means that intervals containing many GitHub
-results influence the average more than intervals containing only a handful.
-These figures are larger than the simple difference between the two overall
-totals. The reason is that the database count is actually higher than the
-cached GitHub count in 119 intervals, by 14,178 files altogether. Those cases
-reduce the overall difference, but they are set to zero in the
-positive-difference calculation.
-
-Most of the difference occurs among files of ordinary size rather than among
-the very largest files. Half of the summed positive difference appears at or
-below 14.4 KB. About 72.4% appears at or below 20 KB, 90.0% at or below 30 KB,
-and 98.6% at or below 50 KB.
-
-There are several reasons to interpret this comparison cautiously. The GitHub
-queries returned counts, not the identities of individual files, so we cannot
-match the results one by one. GitHub's index and the database were also
-observed at different times, and repositories can change between observations.
-In addition, GitHub's `filename:CLAUDE.md` search can include names such as
-`CLAUDE.md.template`, whereas the database total used here includes only an
-exact `CLAUDE.md` basename. GitHub did not mark any of the cached count
-responses as incomplete, but these remaining differences still prevent us
-from calculating exact recall—that is, the share of all relevant GitHub files
-captured by the dataset. The figures provide a useful comparison between the
-two study snapshots, not a measurement of GitHub's current contents.
 
 ## Requirements
 
