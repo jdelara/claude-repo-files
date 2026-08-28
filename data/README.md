@@ -6,8 +6,8 @@ Place the frozen database here with this exact name:
 data/mined.db
 ```
 
-The database is not stored in Git because it is 1,198,850,048 bytes (about
-1.20 GB). It can be downloaded from [here](https://miso.es/claude-repo-files/mined.db).
+The database is not stored in Git because it is about 1.20 GB. 
+It can be downloaded from [here](https://miso.es/claude-repo-files/mined.db).
 
 - SHA-256: `29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442`
 - Observation interval: 14 July 2026 18:09:05 UTC to 23 July 2026 17:50:14 UTC
