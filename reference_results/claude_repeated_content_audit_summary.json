@@ -1,0 +1,121 @@
+{
+  "abstention_review_categories": [
+    {
+      "review_category": "empty_placeholder",
+      "rows": 1
+    },
+    {
+      "review_category": "short_ambiguous",
+      "rows": 2
+    },
+    {
+      "review_category": "substantive_repeated_document",
+      "rows": 7
+    }
+  ],
+  "accepted_confusion": [
+    {
+      "auto_category": "empty_placeholder",
+      "review_category": "empty_placeholder",
+      "rows": 9
+    },
+    {
+      "auto_category": "generated_context",
+      "review_category": "generated_context",
+      "rows": 10
+    },
+    {
+      "auto_category": "pointer_shim",
+      "review_category": "pointer_shim",
+      "rows": 10
+    },
+    {
+      "auto_category": "substantive_repeated_document",
+      "review_category": "generated_context",
+      "rows": 1
+    },
+    {
+      "auto_category": "substantive_repeated_document",
+      "review_category": "substantive_repeated_document",
+      "rows": 8
+    },
+    {
+      "auto_category": "substantive_repeated_document",
+      "review_category": "template_scaffold",
+      "rows": 1
+    },
+    {
+      "auto_category": "template_scaffold",
+      "review_category": "template_scaffold",
+      "rows": 2
+    }
+  ],
+  "accepted_correct": 39,
+  "accepted_incorrect": 2,
+  "accepted_labels": 41,
+  "accepted_precision": 0.9512195121951219,
+  "accepted_precision_wilson_95": {
+    "lower": 0.8386102112962914,
+    "upper": 0.9865190546348308
+  },
+  "audit_rows": 51,
+  "by_auto_category": [
+    {
+      "accepted_labels": 10,
+      "accepted_precision": 1.0,
+      "auto_category": "pointer_shim",
+      "classifier_abstentions": 0,
+      "correct": 10,
+      "incorrect": 0,
+      "sampled": 10
+    },
+    {
+      "accepted_labels": 9,
+      "accepted_precision": 1.0,
+      "auto_category": "empty_placeholder",
+      "classifier_abstentions": 0,
+      "correct": 9,
+      "incorrect": 0,
+      "sampled": 9
+    },
+    {
+      "accepted_labels": 10,
+      "accepted_precision": 1.0,
+      "auto_category": "generated_context",
+      "classifier_abstentions": 0,
+      "correct": 10,
+      "incorrect": 0,
+      "sampled": 10
+    },
+    {
+      "accepted_labels": 2,
+      "accepted_precision": 1.0,
+      "auto_category": "template_scaffold",
+      "classifier_abstentions": 0,
+      "correct": 2,
+      "incorrect": 0,
+      "sampled": 2
+    },
+    {
+      "accepted_labels": 10,
+      "accepted_precision": 0.8,
+      "auto_category": "substantive_repeated_document",
+      "classifier_abstentions": 0,
+      "correct": 8,
+      "incorrect": 2,
+      "sampled": 10
+    },
+    {
+      "accepted_labels": 0,
+      "accepted_precision": null,
+      "auto_category": "short_ambiguous",
+      "classifier_abstentions": 10,
+      "correct": 0,
+      "incorrect": 0,
+      "sampled": 10
+    }
+  ],
+  "classifier_abstentions": 10,
+  "interpretation": "accepted-label precision is a targeted single-reviewer diagnostic; abstention assignments diagnose coverage and are not counted as errors",
+  "sampling": "deterministic category-by-size stratified sample; not proportional to content, group, file, or repository prevalence"
+}

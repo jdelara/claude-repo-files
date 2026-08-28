@@ -1,0 +1,18 @@
+{
+  "cross_repository_families": 2989,
+  "distinct_content_hashes": 95585,
+  "duplicate_families": 3423,
+  "files_in_duplicate_families": 16602,
+  "files_in_duplicate_family_share": 0.15264241844728035,
+  "hashed_files": 108764,
+  "largest_family_hash": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+  "largest_family_repositories": 853,
+  "largest_family_size": 1148,
+  "removable_repeated_instance_share": 0.12117060792173881,
+  "repeated_instances": 13179,
+  "scope": "exact-claude",
+  "scope_definition": "case-insensitive basename equal to CLAUDE.md",
+  "scoped_files": 108764,
+  "single_repository_families": 434,
+  "unhashed_files": 0
+}

@@ -1,0 +1,1320 @@
+{
+  "analysis": "repository-level placement of exact CLAUDE.md files",
+  "definitions": {
+    "directory_depth": "number of POSIX path components before the basename",
+    "high_containment": "different content hashes, required shared-line minimum, below the Jaccard threshold, and intersection/minimum-set-size at or above the containment threshold",
+    "high_jaccard": "different content hashes, required shared-line minimum, and normalized-line-set Jaccard similarity at or above the threshold",
+    "instruction_scope_chain": "number of distinct CLAUDE.md-containing directory scopes along the nearest-ancestor chain, including the current scope",
+    "logical_scope": "D for either D/CLAUDE.md or D/.claude/CLAUDE.md; an operational mapping from documented locations, not an observed load",
+    "nearest_ancestor": "closest strict ancestor directory that also contains an exact CLAUDE.md; all files at an ambiguous nearest scope produce edges",
+    "normalized_equivalent": "different content hashes but identical non-empty normalized-line sets",
+    "normalized_line": "non-empty line after Unicode NFKC normalization, trimming, internal-whitespace collapse, and case folding; duplicates form a set",
+    "physical_nested_file": "stored path has at least one '/' directory separator; this is a path property and not necessarily a non-root instruction scope",
+    "placement_form": "direct D/CLAUDE.md or case-insensitive hidden D/.claude/CLAUDE.md candidate form; exact-case counts retained",
+    "quantiles": "empirical nearest-rank",
+    "root_file": "stored path has no '/' directory separator"
+  },
+  "directory_depth": {
+    "counts": [
+      {
+        "directory_depth": 0,
+        "file_share": 0.6760876760692877,
+        "files": 73534
+      },
+      {
+        "directory_depth": 1,
+        "file_share": 0.11118568644036629,
+        "files": 12093
+      },
+      {
+        "directory_depth": 2,
+        "file_share": 0.09869074326063772,
+        "files": 10734
+      },
+      {
+        "directory_depth": 3,
+        "file_share": 0.05200250082747968,
+        "files": 5656
+      },
+      {
+        "directory_depth": 4,
+        "file_share": 0.029274392262145562,
+        "files": 3184
+      },
+      {
+        "directory_depth": 5,
+        "file_share": 0.018085028134309147,
+        "files": 1967
+      },
+      {
+        "directory_depth": 6,
+        "file_share": 0.008283991026442573,
+        "files": 901
+      },
+      {
+        "directory_depth": 7,
+        "file_share": 0.003457026221911662,
+        "files": 376
+      },
+      {
+        "directory_depth": 8,
+        "file_share": 0.0016641535802287522,
+        "files": 181
+      },
+      {
+        "directory_depth": 9,
+        "file_share": 0.000689566400647273,
+        "files": 75
+      },
+      {
+        "directory_depth": 10,
+        "file_share": 0.0003034092162848001,
+        "files": 33
+      },
+      {
+        "directory_depth": 11,
+        "file_share": 0.00012871906145415764,
+        "files": 14
+      },
+      {
+        "directory_depth": 12,
+        "file_share": 0.00010113640542826671,
+        "files": 11
+      },
+      {
+        "directory_depth": 13,
+        "file_share": 3.677687470118789e-05,
+        "files": 4
+      },
+      {
+        "directory_depth": 14,
+        "file_share": 9.194218675296973e-06,
+        "files": 1
+      }
+    ],
+    "distribution": {
+      "count": 108764,
+      "maximum": 14,
+      "mean": 0.7717902982604539,
+      "median": 0,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 1,
+      "p90": 3,
+      "p95": 4,
+      "p99": 6
+    },
+    "nested_file_distribution": {
+      "count": 35230,
+      "maximum": 14,
+      "mean": 2.3827135963667327,
+      "median": 2,
+      "minimum": 1,
+      "p25": 1,
+      "p75": 3,
+      "p90": 5,
+      "p95": 5,
+      "p99": 7
+    }
+  },
+  "documented_scope_mapping": {
+    "logical_file_location": {
+      "nonroot_scope_depth_distribution": {
+        "count": 32749,
+        "maximum": 14,
+        "mean": 2.458181929219213,
+        "median": 2,
+        "minimum": 1,
+        "p25": 1,
+        "p75": 3,
+        "p90": 5,
+        "p95": 5,
+        "p99": 7
+      },
+      "nonroot_scope_file_share": 0.3011014673973006,
+      "nonroot_scope_files": 32749,
+      "project_root_direct_files": 73534,
+      "project_root_hidden_case_variant_files": 2,
+      "project_root_hidden_exact_case_files": 2479,
+      "project_root_hidden_files": 2481,
+      "project_root_scope_file_share": 0.6988985326026994,
+      "project_root_scope_files": 76015
+    },
+    "logical_location_configurations": {
+      "nonroot_only": {
+        "file_share": 0.2706134382700158,
+        "files": 29433,
+        "repositories": 16305,
+        "repository_share": 0.17677096207636767
+      },
+      "project_root_and_nonroot": {
+        "file_share": 0.044812621823397444,
+        "files": 4874,
+        "repositories": 1552,
+        "repository_share": 0.016826036991261735
+      },
+      "project_root_only": {
+        "file_share": 0.6845739399065868,
+        "files": 74457,
+        "repositories": 74381,
+        "repository_share": 0.8064030009323706
+      }
+    },
+    "logical_scope_topology": {
+      "maximum_scope_chain": 7,
+      "nearest_ancestor_scope_edges": 5757,
+      "repositories_with_nearest_ancestor_scope_edges": 2210,
+      "unique_repository_scopes": 108677
+    },
+    "placement_forms": {
+      "direct_files": 105324,
+      "direct_repositories": 89398,
+      "hidden_claude_directory_case_variant_files": 2,
+      "hidden_claude_directory_exact_case_files": 3438,
+      "hidden_claude_directory_file_share": 0.03162811224302159,
+      "hidden_claude_directory_files": 3440,
+      "hidden_claude_directory_repositories": 3064
+    },
+    "project_root_placement_repositories": {
+      "both_forms": 76,
+      "direct_form": 73528,
+      "either_form": 75933,
+      "hidden_form": 2481,
+      "hidden_form_without_direct_form": 2405
+    },
+    "same_logical_scope_alternative_placements": {
+      "different_content_hash_file_pairs": 79,
+      "file_pairs": 81,
+      "nonroot_scope_groups": 5,
+      "project_root_scope_groups": 76,
+      "repositories": 80,
+      "same_content_hash_file_pairs": 2,
+      "scope_groups": 81
+    },
+    "status": "documented-location normalization of stored paths; not an observed Claude Code session or runtime load graph"
+  },
+  "hierarchy": {
+    "child_file_share_of_nested_files": 0.15904059040590407,
+    "child_files_with_nearest_ancestor": 5603,
+    "directory_distance": {
+      "count": 5603,
+      "maximum": 11,
+      "mean": 1.993574870605033,
+      "median": 2,
+      "minimum": 1,
+      "p25": 1,
+      "p75": 2,
+      "p90": 4,
+      "p95": 5,
+      "p99": 7
+    },
+    "files_serving_as_nearest_ancestor": 2781,
+    "instruction_scope_chain_counts": [
+      {
+        "maximum_chain": 1,
+        "repositories": 90036,
+        "repository_share": 0.9761269758667794
+      },
+      {
+        "maximum_chain": 2,
+        "repositories": 2024,
+        "repository_share": 0.021943233808191853
+      },
+      {
+        "maximum_chain": 3,
+        "repositories": 150,
+        "repository_share": 0.001626227801990503
+      },
+      {
+        "maximum_chain": 4,
+        "repositories": 25,
+        "repository_share": 0.0002710379669984171
+      },
+      {
+        "maximum_chain": 5,
+        "repositories": 2,
+        "repository_share": 2.1683037359873373e-05
+      },
+      {
+        "maximum_chain": 7,
+        "repositories": 1,
+        "repository_share": 1.0841518679936686e-05
+      }
+    ],
+    "maximum_instruction_scope_chain": {
+      "count": 92238,
+      "maximum": 7,
+      "mean": 1.0261605845746873,
+      "median": 1,
+      "minimum": 1,
+      "p25": 1,
+      "p75": 1,
+      "p90": 1,
+      "p95": 1,
+      "p99": 2
+    },
+    "maximum_observed_instruction_scope_chain": 7,
+    "multi_file_repositories_with_nearest_ancestor_edges": 2202,
+    "multi_file_repositories_without_ancestor_relation": 3003,
+    "multi_file_repository_share_with_nearest_ancestor_edges": 0.42305475504322765,
+    "nearest_ancestor_edges": 5603,
+    "nested_parent_edges": 2821,
+    "repositories_with_edges_by_location_configuration": {
+      "nested_only": 668,
+      "root_and_nested": 1534,
+      "root_only": 0
+    },
+    "repositories_with_nearest_ancestor_edges": 2202,
+    "repositories_with_same_directory_file_groups": 6,
+    "repository_share_with_nearest_ancestor_edges": 0.02387302413322058,
+    "root_parent_edges": 2782,
+    "same_directory_file_groups": 6
+  },
+  "location_configurations": {
+    "nested_only": {
+      "file_share": 0.2952907211945129,
+      "files": 32117,
+      "repositories": 18710,
+      "repository_share": 0.20284481450161537
+    },
+    "root_and_nested": {
+      "file_share": 0.04272553418410503,
+      "files": 4647,
+      "repositories": 1534,
+      "repository_share": 0.016630889655022876
+    },
+    "root_only": {
+      "file_share": 0.6619837446213821,
+      "files": 72000,
+      "repositories": 71994,
+      "repository_share": 0.7805242958433617
+    }
+  },
+  "parameters": {
+    "containment_threshold": 0.9,
+    "jaccard_threshold": 0.8,
+    "minimum_shared_normalized_lines": 5
+  },
+  "path_components": {
+    "casefolded": true,
+    "distinct_directory_components": 20853,
+    "distinct_first_directories": 7245,
+    "distinct_immediate_parents": 15002,
+    "top_20": {
+      "any_directory": [
+        {
+          "component_casefolded": "src",
+          "dimension": "any_directory",
+          "example_paths": "02zetdan/MNA-STANAG-voice-action::src/command-agent/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/db/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/lib/CLAUDE.md",
+          "file_count": 4447,
+          "file_share_of_nested_files": 0.12622764689185353,
+          "occurrence_count": 4518,
+          "rank": 1,
+          "repository_count": 1814,
+          "repository_share_of_repositories_with_nested_files": 0.08960679707567674
+        },
+        {
+          "component_casefolded": ".claude",
+          "dimension": "any_directory",
+          "example_paths": "07kamrul/SCMS::.claude/prds/CLAUDE.md | 0keita/configs::.claude/CLAUDE.md | 0xeb/TheBigPromptLibrary::.claude/CLAUDE.md",
+          "file_count": 3963,
+          "file_share_of_nested_files": 0.1124893556627874,
+          "occurrence_count": 3971,
+          "rank": 2,
+          "repository_count": 3364,
+          "repository_share_of_repositories_with_nested_files": 0.1661726931436475
+        },
+        {
+          "component_casefolded": "skills",
+          "dimension": "any_directory",
+          "example_paths": "0xzgbot/forge-nps-v01::hermes_home/profiles/live/skills/creative/popular-web-designs/templates/claude.md | 1JayPeng/doit-skill::.omp/skills/doit/CLAUDE.md | 26mitch26/ai-mall::.claude/skills/CLAUDE.md",
+          "file_count": 1914,
+          "file_share_of_nested_files": 0.05432869713312518,
+          "occurrence_count": 1959,
+          "rank": 3,
+          "repository_count": 860,
+          "repository_share_of_repositories_with_nested_files": 0.04248172297964829
+        },
+        {
+          "component_casefolded": "docs",
+          "dimension": "any_directory",
+          "example_paths": "007bba/Comprehensive-Training-Version-Mall::docs/Claude.md | 0bkevin/zrode::docs/providers/claude.md | 0odonkihooto0/Komplid2::docs/okf/architecture/docs/claude.md",
+          "file_count": 1710,
+          "file_share_of_nested_files": 0.048538177689469206,
+          "occurrence_count": 1751,
+          "rank": 4,
+          "repository_count": 1317,
+          "repository_share_of_repositories_with_nested_files": 0.06505631298162419
+        },
+        {
+          "component_casefolded": "packages",
+          "dimension": "any_directory",
+          "example_paths": "0ui-labs/chat-exporter::packages/shared/CLAUDE.md | 0ui-labs/chat-exporter::packages/shared/src/CLAUDE.md | 0x-copilot-dev/0x-copilot::packages/api-types/CLAUDE.md",
+          "file_count": 1694,
+          "file_share_of_nested_files": 0.04808401930173148,
+          "occurrence_count": 1696,
+          "rank": 5,
+          "repository_count": 955,
+          "repository_share_of_repositories_with_nested_files": 0.04717447144833037
+        },
+        {
+          "component_casefolded": "apps",
+          "dimension": "any_directory",
+          "example_paths": "0ui-labs/chat-exporter::apps/server/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/db/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/lib/CLAUDE.md",
+          "file_count": 1337,
+          "file_share_of_nested_files": 0.03795061027533352,
+          "occurrence_count": 1350,
+          "rank": 6,
+          "repository_count": 843,
+          "repository_share_of_repositories_with_nested_files": 0.041641967990515706
+        },
+        {
+          "component_casefolded": "app",
+          "dimension": "any_directory",
+          "example_paths": "0xSparks/hono_learn::apps/app/CLAUDE.md | 1aday/dummy-next-deploy::app/blog/tags/[tag]/CLAUDE.md | 1aday/law_search::app/cases/[slug]/CLAUDE.md",
+          "file_count": 1054,
+          "file_share_of_nested_files": 0.029917683792222538,
+          "occurrence_count": 1062,
+          "rank": 7,
+          "repository_count": 511,
+          "repository_share_of_repositories_with_nested_files": 0.025242047026279392
+        },
+        {
+          "component_casefolded": "claude",
+          "dimension": "any_directory",
+          "example_paths": "0xNyk/awesome-agent-cortex::claude/CLAUDE.md | 1henrypage/.dotfiles::config/claude/CLAUDE.md | 20niship/dotfiles::claude/CLAUDE.md",
+          "file_count": 937,
+          "file_share_of_nested_files": 0.026596650581890435,
+          "occurrence_count": 948,
+          "rank": 8,
+          "repository_count": 813,
+          "repository_share_of_repositories_with_nested_files": 0.04016004742145821
+        },
+        {
+          "component_casefolded": "templates",
+          "dimension": "any_directory",
+          "example_paths": "0xchoux1/cc-memory::templates/CLAUDE.md | 0xzgbot/forge-nps-v01::hermes_home/profiles/live/skills/creative/popular-web-designs/templates/claude.md | 273v/kaos-ui::kaos_ui/templates/web/api/CLAUDE.md",
+          "file_count": 874,
+          "file_share_of_nested_files": 0.024808401930173148,
+          "occurrence_count": 876,
+          "rank": 9,
+          "repository_count": 664,
+          "repository_share_of_repositories_with_nested_files": 0.032799841928472635
+        },
+        {
+          "component_casefolded": "frontend",
+          "dimension": "any_directory",
+          "example_paths": "0xcircuitbreaker/lucrum-monorepo::frontend/interface/packages/uniswap/CLAUDE.md | 0xcircuitbreaker/lucrum-monorepo::frontend/interface/packages/wallet/CLAUDE.md | 1154761334/it-bidding-copilot::frontend/packages/model-runtime/CLAUDE.md",
+          "file_count": 861,
+          "file_share_of_nested_files": 0.02443939824013625,
+          "occurrence_count": 867,
+          "rank": 10,
+          "repository_count": 693,
+          "repository_share_of_repositories_with_nested_files": 0.03423236514522822
+        },
+        {
+          "component_casefolded": "backend",
+          "dimension": "any_directory",
+          "example_paths": "0mkara/masala-web::backend/CLAUDE.md | 18674179247/Culino::backend/CLAUDE.md | 1yby1/project-life-manage::backend/CLAUDE.md",
+          "file_count": 803,
+          "file_share_of_nested_files": 0.022793074084587,
+          "occurrence_count": 824,
+          "rank": 11,
+          "repository_count": 582,
+          "repository_share_of_repositories_with_nested_files": 0.02874925903971547
+        },
+        {
+          "component_casefolded": "components",
+          "dimension": "any_directory",
+          "example_paths": "0ui-labs/chat-exporter::apps/web/src/components/format-workspace/CLAUDE.md | 0ui-labs/chat-exporter::apps/web/src/components/ui/CLAUDE.md | 1aday/leaders::src/components/ui/CLAUDE.md",
+          "file_count": 734,
+          "file_share_of_nested_files": 0.020834516037468068,
+          "occurrence_count": 735,
+          "rank": 12,
+          "repository_count": 299,
+          "repository_share_of_repositories_with_nested_files": 0.014769808338273068
+        },
+        {
+          "component_casefolded": "plugins",
+          "dimension": "any_directory",
+          "example_paths": "1111philo/plato::plugins/wordpress-info/CLAUDE.md | 777genius/plugin-kit-ai::examples/plugins/claude-basic-prod/CLAUDE.md | 777genius/plugin-kit-ai::examples/plugins/codex-package-prod/CLAUDE.md",
+          "file_count": 688,
+          "file_share_of_nested_files": 0.01952881067272211,
+          "occurrence_count": 976,
+          "rank": 13,
+          "repository_count": 281,
+          "repository_share_of_repositories_with_nested_files": 0.013880655996838569
+        },
+        {
+          "component_casefolded": "tests",
+          "dimension": "any_directory",
+          "example_paths": "0ui-labs/ContextCurator::tests/unit/cli/CLAUDE.md | AaronAbuUsama/claude-swarm::packages/core/tests/fixtures/files/mock-claude-context/CLAUDE.md | AbdelStark/claude-md-compiler::tests/fixtures/repo_a/CLAUDE.md",
+          "file_count": 616,
+          "file_share_of_nested_files": 0.017485097927902357,
+          "occurrence_count": 618,
+          "rank": 14,
+          "repository_count": 297,
+          "repository_share_of_repositories_with_nested_files": 0.014671013633669235
+        },
+        {
+          "component_casefolded": "projects",
+          "dimension": "any_directory",
+          "example_paths": "abbeazale/agent-workspace::projects/example-project/CLAUDE.md | adithyan-ak/AgentHound::test-infra/services/workstation/home/projects/example/CLAUDE.md | agisota/.dotfiles::configs/factory/projects/templates/python/CLAUDE.md",
+          "file_count": 601,
+          "file_share_of_nested_files": 0.01705932443939824,
+          "occurrence_count": 601,
+          "rank": 15,
+          "repository_count": 166,
+          "repository_share_of_repositories_with_nested_files": 0.008199960482118159
+        },
+        {
+          "component_casefolded": "agents",
+          "dimension": "any_directory",
+          "example_paths": "101-ways-to-die-in-a-hostel/book-015-hypothermia::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-016-venomous-bite::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-025-pillow-suffocation::AGENTS/CLAUDE.md",
+          "file_count": 598,
+          "file_share_of_nested_files": 0.016974169741697416,
+          "occurrence_count": 600,
+          "rank": 16,
+          "repository_count": 385,
+          "repository_share_of_repositories_with_nested_files": 0.019017980636237896
+        },
+        {
+          "component_casefolded": "lib",
+          "dimension": "any_directory",
+          "example_paths": "001omkar/AI-Language-Translator::venv/Lib/site-packages/streamlit_extras/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/lib/CLAUDE.md | 0ui-labs/chat-exporter::apps/web/src/lib/CLAUDE.md",
+          "file_count": 571,
+          "file_share_of_nested_files": 0.016207777462390008,
+          "occurrence_count": 571,
+          "rank": 17,
+          "repository_count": 296,
+          "repository_share_of_repositories_with_nested_files": 0.014621616281367319
+        },
+        {
+          "component_casefolded": "web",
+          "dimension": "any_directory",
+          "example_paths": "0ui-labs/chat-exporter::apps/web/CLAUDE.md | 0ui-labs/chat-exporter::apps/web/src/CLAUDE.md | 0ui-labs/chat-exporter::apps/web/src/components/format-workspace/CLAUDE.md",
+          "file_count": 563,
+          "file_share_of_nested_files": 0.015980698268521148,
+          "occurrence_count": 565,
+          "rank": 18,
+          "repository_count": 346,
+          "repository_share_of_repositories_with_nested_files": 0.01709148389646315
+        },
+        {
+          "component_casefolded": "crates",
+          "dimension": "any_directory",
+          "example_paths": "89jobrien/myrv::crates/core/CLAUDE.md | adbrowne/smelt-sql::crates/smelt-backend-duckdb/CLAUDE.md | adbrowne/smelt-sql::crates/smelt-core/CLAUDE.md",
+          "file_count": 538,
+          "file_share_of_nested_files": 0.015271075787680954,
+          "occurrence_count": 539,
+          "rank": 19,
+          "repository_count": 177,
+          "repository_share_of_repositories_with_nested_files": 0.008743331357439241
+        },
+        {
+          "component_casefolded": "examples",
+          "dimension": "any_directory",
+          "example_paths": "23aneessss/AppXray::Examples/Claude.md | 45ck/noslop::examples/long-horizon/02-hierarchical-context/src/api/CLAUDE.md | 45ck/noslop::examples/long-horizon/03-checkpoint-sessions/CLAUDE.md",
+          "file_count": 528,
+          "file_share_of_nested_files": 0.014987226795344876,
+          "occurrence_count": 528,
+          "rank": 20,
+          "repository_count": 371,
+          "repository_share_of_repositories_with_nested_files": 0.018326417704011066
+        }
+      ],
+      "first_directory": [
+        {
+          "component_casefolded": ".claude",
+          "dimension": "first_directory",
+          "example_paths": "07kamrul/SCMS::.claude/prds/CLAUDE.md | 0keita/configs::.claude/CLAUDE.md | 0xeb/TheBigPromptLibrary::.claude/CLAUDE.md",
+          "file_count": 2952,
+          "file_share_of_nested_files": 0.08379222253761,
+          "occurrence_count": 2952,
+          "rank": 1,
+          "repository_count": 2752,
+          "repository_share_of_repositories_with_nested_files": 0.13594151353487452
+        },
+        {
+          "component_casefolded": "src",
+          "dimension": "first_directory",
+          "example_paths": "02zetdan/MNA-STANAG-voice-action::src/command-agent/CLAUDE.md | 0ui-labs/ContextCurator::src/codemap/CLAUDE.md | 0ui-labs/ContextCurator::src/codemap/core/CLAUDE.md",
+          "file_count": 2692,
+          "file_share_of_nested_files": 0.07641214873687198,
+          "occurrence_count": 2692,
+          "rank": 2,
+          "repository_count": 1185,
+          "repository_share_of_repositories_with_nested_files": 0.05853586247777119
+        },
+        {
+          "component_casefolded": "packages",
+          "dimension": "first_directory",
+          "example_paths": "0ui-labs/chat-exporter::packages/shared/CLAUDE.md | 0ui-labs/chat-exporter::packages/shared/src/CLAUDE.md | 0x-copilot-dev/0x-copilot::packages/api-types/CLAUDE.md",
+          "file_count": 1553,
+          "file_share_of_nested_files": 0.04408174850979279,
+          "occurrence_count": 1553,
+          "rank": 3,
+          "repository_count": 880,
+          "repository_share_of_repositories_with_nested_files": 0.04346967002568662
+        },
+        {
+          "component_casefolded": "docs",
+          "dimension": "first_directory",
+          "example_paths": "007bba/Comprehensive-Training-Version-Mall::docs/Claude.md | 0bkevin/zrode::docs/providers/claude.md | 0odonkihooto0/Komplid2::docs/okf/architecture/docs/claude.md",
+          "file_count": 1366,
+          "file_share_of_nested_files": 0.038773772353108145,
+          "occurrence_count": 1366,
+          "rank": 4,
+          "repository_count": 1108,
+          "repository_share_of_repositories_with_nested_files": 0.05473226635052361
+        },
+        {
+          "component_casefolded": "apps",
+          "dimension": "first_directory",
+          "example_paths": "0ui-labs/chat-exporter::apps/server/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/db/CLAUDE.md | 0ui-labs/chat-exporter::apps/server/src/lib/CLAUDE.md",
+          "file_count": 1168,
+          "file_share_of_nested_files": 0.03315356230485382,
+          "occurrence_count": 1168,
+          "rank": 5,
+          "repository_count": 775,
+          "repository_share_of_repositories_with_nested_files": 0.03828294803398538
+        },
+        {
+          "component_casefolded": "skills",
+          "dimension": "first_directory",
+          "example_paths": "Abhinavexists/claude-config::skills/CLAUDE.md | Abhinavexists/claude-config::skills/codebase-analysis/CLAUDE.md | Abhinavexists/claude-config::skills/decision-critic/CLAUDE.md",
+          "file_count": 691,
+          "file_share_of_nested_files": 0.019613965370422936,
+          "occurrence_count": 691,
+          "rank": 6,
+          "repository_count": 236,
+          "repository_share_of_repositories_with_nested_files": 0.011657775143252322
+        },
+        {
+          "component_casefolded": "frontend",
+          "dimension": "first_directory",
+          "example_paths": "0xcircuitbreaker/lucrum-monorepo::frontend/interface/packages/uniswap/CLAUDE.md | 0xcircuitbreaker/lucrum-monorepo::frontend/interface/packages/wallet/CLAUDE.md | 1154761334/it-bidding-copilot::frontend/packages/model-runtime/CLAUDE.md",
+          "file_count": 663,
+          "file_share_of_nested_files": 0.018819188191881917,
+          "occurrence_count": 663,
+          "rank": 7,
+          "repository_count": 524,
+          "repository_share_of_repositories_with_nested_files": 0.02588421260620431
+        },
+        {
+          "component_casefolded": "backend",
+          "dimension": "first_directory",
+          "example_paths": "0mkara/masala-web::backend/CLAUDE.md | 18674179247/Culino::backend/CLAUDE.md | 1yby1/project-life-manage::backend/CLAUDE.md",
+          "file_count": 545,
+          "file_share_of_nested_files": 0.015469770082316208,
+          "occurrence_count": 545,
+          "rank": 8,
+          "repository_count": 444,
+          "repository_share_of_repositories_with_nested_files": 0.021932424422050976
+        },
+        {
+          "component_casefolded": "plugins",
+          "dimension": "first_directory",
+          "example_paths": "1111philo/plato::plugins/wordpress-info/CLAUDE.md | 777genius/universal-plugins-for-ai-agents::plugins/cloudflare/CLAUDE.md | 777genius/universal-plugins-for-ai-agents::plugins/firebase/CLAUDE.md",
+          "file_count": 522,
+          "file_share_of_nested_files": 0.01481691739994323,
+          "occurrence_count": 522,
+          "rank": 9,
+          "repository_count": 188,
+          "repository_share_of_repositories_with_nested_files": 0.009286702232760324
+        },
+        {
+          "component_casefolded": "projects",
+          "dimension": "first_directory",
+          "example_paths": "abbeazale/agent-workspace::projects/example-project/CLAUDE.md | AGLz/agl-hostman::projects/hive-migration/CLAUDE.md | alielar/claude-workspace::projects/marketing-video-generator/CLAUDE.md",
+          "file_count": 522,
+          "file_share_of_nested_files": 0.01481691739994323,
+          "occurrence_count": 522,
+          "rank": 10,
+          "repository_count": 115,
+          "repository_share_of_repositories_with_nested_files": 0.005680695514720411
+        },
+        {
+          "component_casefolded": "claude",
+          "dimension": "first_directory",
+          "example_paths": "0xNyk/awesome-agent-cortex::claude/CLAUDE.md | 20niship/dotfiles::claude/CLAUDE.md | a-digital-arts-institute/adai-v1::claude/CLAUDE.md",
+          "file_count": 505,
+          "file_share_of_nested_files": 0.0143343741129719,
+          "occurrence_count": 505,
+          "rank": 11,
+          "repository_count": 455,
+          "repository_share_of_repositories_with_nested_files": 0.02247579529737206
+        },
+        {
+          "component_casefolded": "crates",
+          "dimension": "first_directory",
+          "example_paths": "89jobrien/myrv::crates/core/CLAUDE.md | adbrowne/smelt-sql::crates/smelt-backend-duckdb/CLAUDE.md | adbrowne/smelt-sql::crates/smelt-core/CLAUDE.md",
+          "file_count": 499,
+          "file_share_of_nested_files": 0.014164064717570252,
+          "occurrence_count": 499,
+          "rank": 12,
+          "repository_count": 166,
+          "repository_share_of_repositories_with_nested_files": 0.008199960482118159
+        },
+        {
+          "component_casefolded": "app",
+          "dimension": "first_directory",
+          "example_paths": "1aday/dummy-next-deploy::app/blog/tags/[tag]/CLAUDE.md | 1aday/law_search::app/cases/[slug]/CLAUDE.md | 1aday/law_search::app/chat/CLAUDE.md",
+          "file_count": 476,
+          "file_share_of_nested_files": 0.013511212035197276,
+          "occurrence_count": 476,
+          "rank": 13,
+          "repository_count": 259,
+          "repository_share_of_repositories_with_nested_files": 0.012793914246196404
+        },
+        {
+          "component_casefolded": "templates",
+          "dimension": "first_directory",
+          "example_paths": "0xchoux1/cc-memory::templates/CLAUDE.md | aantriono82/asesmenku::templates/analytics/CLAUDE.md | aantriono82/asesmenku::templates/design/CLAUDE.md",
+          "file_count": 467,
+          "file_share_of_nested_files": 0.013255747942094805,
+          "occurrence_count": 467,
+          "rank": 14,
+          "repository_count": 362,
+          "repository_share_of_repositories_with_nested_files": 0.017881841533293814
+        },
+        {
+          "component_casefolded": "tests",
+          "dimension": "first_directory",
+          "example_paths": "0ui-labs/ContextCurator::tests/unit/cli/CLAUDE.md | AbdelStark/claude-md-compiler::tests/fixtures/repo_a/CLAUDE.md | abhijitbansal/claude-skills::tests/fixtures/live-state/CLAUDE.md",
+          "file_count": 399,
+          "file_share_of_nested_files": 0.011325574794209481,
+          "occurrence_count": 399,
+          "rank": 15,
+          "repository_count": 217,
+          "repository_share_of_repositories_with_nested_files": 0.010719225449515906
+        },
+        {
+          "component_casefolded": "examples",
+          "dimension": "first_directory",
+          "example_paths": "23aneessss/AppXray::Examples/Claude.md | 45ck/noslop::examples/long-horizon/02-hierarchical-context/src/api/CLAUDE.md | 45ck/noslop::examples/long-horizon/03-checkpoint-sessions/CLAUDE.md",
+          "file_count": 388,
+          "file_share_of_nested_files": 0.011013340902639796,
+          "occurrence_count": 388,
+          "rank": 16,
+          "repository_count": 277,
+          "repository_share_of_repositories_with_nested_files": 0.013683066587630903
+        },
+        {
+          "component_casefolded": ".agents",
+          "dimension": "first_directory",
+          "example_paths": "3balljugglerYu/ai_coordinate::.agents/skills/supabase-postgres-best-practices/CLAUDE.md | abhishekmmgn/didactic-invention::.agents/skills/gstack/CLAUDE.md | AcidicSoil/riseOnAgents::.agents/skills/self-improving-workflow/seeds/CLAUDE.md",
+          "file_count": 340,
+          "file_share_of_nested_files": 0.009650865739426626,
+          "occurrence_count": 340,
+          "rank": 17,
+          "repository_count": 177,
+          "repository_share_of_repositories_with_nested_files": 0.008743331357439241
+        },
+        {
+          "component_casefolded": "mirrors",
+          "dimension": "first_directory",
+          "example_paths": "gabrielmoreira/agent-skills-mirror::mirrors/repos/activepieces@activepieces/packages/core/piece-types/CLAUDE.md | gabrielmoreira/agent-skills-mirror::mirrors/repos/aden-hive@hive/CLAUDE.md | gabrielmoreira/agent-skills-mirror::mirrors/repos/affaan-m@ECC/docs/zh-CN/examples/CLAUDE.md",
+          "file_count": 308,
+          "file_share_of_nested_files": 0.008742548963951179,
+          "occurrence_count": 308,
+          "rank": 18,
+          "repository_count": 1,
+          "repository_share_of_repositories_with_nested_files": 4.939735230191662e-05
+        },
+        {
+          "component_casefolded": "agents",
+          "dimension": "first_directory",
+          "example_paths": "101-ways-to-die-in-a-hostel/book-015-hypothermia::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-016-venomous-bite::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-025-pillow-suffocation::AGENTS/CLAUDE.md",
+          "file_count": 292,
+          "file_share_of_nested_files": 0.008288390576213455,
+          "occurrence_count": 292,
+          "rank": 19,
+          "repository_count": 174,
+          "repository_share_of_repositories_with_nested_files": 0.008595139300533492
+        },
+        {
+          "component_casefolded": "web",
+          "dimension": "first_directory",
+          "example_paths": "adamkali/mindscape::web/CLAUDE.md | agts86/LineWebHookAPI::web/CLAUDE.md | Agustin5421/stock-tracker-api::web/CLAUDE.md",
+          "file_count": 254,
+          "file_share_of_nested_files": 0.007209764405336361,
+          "occurrence_count": 254,
+          "rank": 20,
+          "repository_count": 112,
+          "repository_share_of_repositories_with_nested_files": 0.005532503457814661
+        }
+      ],
+      "immediate_parent": [
+        {
+          "component_casefolded": ".claude",
+          "dimension": "immediate_parent",
+          "example_paths": "0keita/configs::.claude/CLAUDE.md | 0xeb/TheBigPromptLibrary::.claude/CLAUDE.md | 0xEchoPhantom/notion-lite::.claude/CLAUDE.md",
+          "file_count": 3440,
+          "file_share_of_nested_files": 0.09764405336361055,
+          "occurrence_count": 3440,
+          "rank": 1,
+          "repository_count": 3064,
+          "repository_share_of_repositories_with_nested_files": 0.1513534874530725
+        },
+        {
+          "component_casefolded": "docs",
+          "dimension": "immediate_parent",
+          "example_paths": "007bba/Comprehensive-Training-Version-Mall::docs/Claude.md | 0odonkihooto0/Komplid2::docs/okf/architecture/docs/claude.md | 0xYudhishthra/uniforum::docs/CLAUDE.md",
+          "file_count": 686,
+          "file_share_of_nested_files": 0.019472040874254897,
+          "occurrence_count": 686,
+          "rank": 2,
+          "repository_count": 665,
+          "repository_share_of_repositories_with_nested_files": 0.03284923928077455
+        },
+        {
+          "component_casefolded": "claude",
+          "dimension": "immediate_parent",
+          "example_paths": "0xNyk/awesome-agent-cortex::claude/CLAUDE.md | 1henrypage/.dotfiles::config/claude/CLAUDE.md | 20niship/dotfiles::claude/CLAUDE.md",
+          "file_count": 620,
+          "file_share_of_nested_files": 0.017598637524836785,
+          "occurrence_count": 620,
+          "rank": 3,
+          "repository_count": 591,
+          "repository_share_of_repositories_with_nested_files": 0.02919383521043272
+        },
+        {
+          "component_casefolded": "frontend",
+          "dimension": "immediate_parent",
+          "example_paths": "1mshy/auto-analyser-2::frontend/CLAUDE.md | 24hours/label-box::frontend/CLAUDE.md | 2nofa11/covey_todo::frontend/CLAUDE.md",
+          "file_count": 540,
+          "file_share_of_nested_files": 0.01532784558614817,
+          "occurrence_count": 540,
+          "rank": 4,
+          "repository_count": 537,
+          "repository_share_of_repositories_with_nested_files": 0.026526378186129223
+        },
+        {
+          "component_casefolded": "backend",
+          "dimension": "immediate_parent",
+          "example_paths": "0mkara/masala-web::backend/CLAUDE.md | 18674179247/Culino::backend/CLAUDE.md | 1yby1/project-life-manage::backend/CLAUDE.md",
+          "file_count": 444,
+          "file_share_of_nested_files": 0.012602895259721828,
+          "occurrence_count": 444,
+          "rank": 5,
+          "repository_count": 423,
+          "repository_share_of_repositories_with_nested_files": 0.020895080023710728
+        },
+        {
+          "component_casefolded": "src",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/web/src/CLAUDE.md | 0ui-labs/chat-exporter::packages/shared/src/CLAUDE.md | 1093842024/agent_coding::claudecode/webwork/src/CLAUDE.md",
+          "file_count": 408,
+          "file_share_of_nested_files": 0.01158103888731195,
+          "occurrence_count": 408,
+          "rank": 6,
+          "repository_count": 312,
+          "repository_share_of_repositories_with_nested_files": 0.015411973918197985
+        },
+        {
+          "component_casefolded": "templates",
+          "dimension": "immediate_parent",
+          "example_paths": "0xchoux1/cc-memory::templates/CLAUDE.md | 0xzgbot/forge-nps-v01::hermes_home/profiles/live/skills/creative/popular-web-designs/templates/claude.md | abtion/ci-autofix-agent::templates/CLAUDE.md",
+          "file_count": 356,
+          "file_share_of_nested_files": 0.01010502412716435,
+          "occurrence_count": 356,
+          "rank": 7,
+          "repository_count": 333,
+          "repository_share_of_repositories_with_nested_files": 0.016449318316538234
+        },
+        {
+          "component_casefolded": "web",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/web/CLAUDE.md | 123sssdd/RSS-Reader::apps/web/CLAUDE.md | aaronstone2/automation-trader::apps/web/CLAUDE.md",
+          "file_count": 257,
+          "file_share_of_nested_files": 0.007294919103037184,
+          "occurrence_count": 257,
+          "rank": 8,
+          "repository_count": 253,
+          "repository_share_of_repositories_with_nested_files": 0.012497530132384905
+        },
+        {
+          "component_casefolded": "refresh",
+          "dimension": "immediate_parent",
+          "example_paths": "AbdallahJbeli/safety_dashboard_app::.junie/skills/firebase-basics/references/refresh/claude.md | abdulkerimissaosman/blindtinder::premium-dating-app/.agents/skills/firebase-basics/references/refresh/claude.md | ABHISHEKPATEL8839/familyManagement::agent/skills/firebase-basics/references/refresh/claude.md",
+          "file_count": 214,
+          "file_share_of_nested_files": 0.0060743684359920525,
+          "occurrence_count": 214,
+          "rank": 9,
+          "repository_count": 119,
+          "repository_share_of_repositories_with_nested_files": 0.005878284923928077
+        },
+        {
+          "component_casefolded": "api",
+          "dimension": "immediate_parent",
+          "example_paths": "202210231753/rag::app/api/CLAUDE.md | 273v/kaos-ui::kaos_ui/templates/web/api/CLAUDE.md | 45ck/noslop::examples/long-horizon/02-hierarchical-context/src/api/CLAUDE.md",
+          "file_count": 213,
+          "file_share_of_nested_files": 0.0060459835367584445,
+          "occurrence_count": 213,
+          "rank": 10,
+          "repository_count": 207,
+          "repository_share_of_repositories_with_nested_files": 0.01022525192649674
+        },
+        {
+          "component_casefolded": "app",
+          "dimension": "immediate_parent",
+          "example_paths": "0xSparks/hono_learn::apps/app/CLAUDE.md | 1aday/Watchfinder::src/app/CLAUDE.md | 987818136/aibuy::app/claude.md",
+          "file_count": 208,
+          "file_share_of_nested_files": 0.005904059040590406,
+          "occurrence_count": 208,
+          "rank": 11,
+          "repository_count": 200,
+          "repository_share_of_repositories_with_nested_files": 0.009879470460383323
+        },
+        {
+          "component_casefolded": "scripts",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/server/src/scripts/CLAUDE.md | 1aday/leaders::scripts/CLAUDE.md | AbeJitsu/Need_This_Done::app/scripts/CLAUDE.md",
+          "file_count": 195,
+          "file_share_of_nested_files": 0.005535055350553505,
+          "occurrence_count": 195,
+          "rank": 12,
+          "repository_count": 155,
+          "repository_share_of_repositories_with_nested_files": 0.007656589606797075
+        },
+        {
+          "component_casefolded": "agents",
+          "dimension": "immediate_parent",
+          "example_paths": "101-ways-to-die-in-a-hostel/book-015-hypothermia::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-016-venomous-bite::AGENTS/CLAUDE.md | 101-ways-to-die-in-a-hostel/book-025-pillow-suffocation::AGENTS/CLAUDE.md",
+          "file_count": 175,
+          "file_share_of_nested_files": 0.004967357365881351,
+          "occurrence_count": 175,
+          "rank": 13,
+          "repository_count": 159,
+          "repository_share_of_repositories_with_nested_files": 0.007854179016004742
+        },
+        {
+          "component_casefolded": "ui",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/web/src/components/ui/CLAUDE.md | 1aday/leaders::src/components/ui/CLAUDE.md | a-grasso/agent-docs-standard::example/ui/CLAUDE.md",
+          "file_count": 166,
+          "file_share_of_nested_files": 0.004711893272778882,
+          "occurrence_count": 166,
+          "rank": 14,
+          "repository_count": 163,
+          "repository_share_of_repositories_with_nested_files": 0.008051768425212408
+        },
+        {
+          "component_casefolded": "core",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/ContextCurator::src/codemap/core/CLAUDE.md | 89jobrien/myrv::crates/core/CLAUDE.md | a5c-ai/babysitter::packages/kradle/core/CLAUDE.md",
+          "file_count": 154,
+          "file_share_of_nested_files": 0.004371274481975589,
+          "occurrence_count": 154,
+          "rank": 15,
+          "repository_count": 146,
+          "repository_share_of_repositories_with_nested_files": 0.0072120134360798265
+        },
+        {
+          "component_casefolded": "lib",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/server/src/lib/CLAUDE.md | 0ui-labs/chat-exporter::apps/web/src/lib/CLAUDE.md | 1aday/dummy-next-deploy::lib/CLAUDE.md",
+          "file_count": 133,
+          "file_share_of_nested_files": 0.003775191598069827,
+          "occurrence_count": 133,
+          "rank": 16,
+          "repository_count": 122,
+          "repository_share_of_repositories_with_nested_files": 0.006026476980833828
+        },
+        {
+          "component_casefolded": "components",
+          "dimension": "immediate_parent",
+          "example_paths": "3dresolucaoo-ship-it/TestesiteOficial::components/CLAUDE.md | abhishektuteja01/CapTrack::src/components/CLAUDE.md | adanoelle/fern-shell::fern/components/CLAUDE.md",
+          "file_count": 132,
+          "file_share_of_nested_files": 0.003746806698836219,
+          "occurrence_count": 132,
+          "rank": 17,
+          "repository_count": 129,
+          "repository_share_of_repositories_with_nested_files": 0.0063722584469472435
+        },
+        {
+          "component_casefolded": "server",
+          "dimension": "immediate_parent",
+          "example_paths": "0ui-labs/chat-exporter::apps/server/CLAUDE.md | 18Wangu/London_Hackathon_encodeAI::tonk/apps/wheel-of-fate/server/CLAUDE.md | 9-p9/9pod::components/server/CLAUDE.md",
+          "file_count": 122,
+          "file_share_of_nested_files": 0.003462957706500142,
+          "occurrence_count": 122,
+          "rank": 18,
+          "repository_count": 121,
+          "repository_share_of_repositories_with_nested_files": 0.00597707962853191
+        },
+        {
+          "component_casefolded": "config",
+          "dimension": "immediate_parent",
+          "example_paths": "1093842024/agent_coding::claudecode/webwork/config/CLAUDE.md | abn-r/sacdia-backend::src/config/CLAUDE.md | adityahimaone/hermes-agent-rtk-caveman::config/CLAUDE.md",
+          "file_count": 120,
+          "file_share_of_nested_files": 0.0034061879080329264,
+          "occurrence_count": 120,
+          "rank": 19,
+          "repository_count": 115,
+          "repository_share_of_repositories_with_nested_files": 0.005680695514720411
+        },
+        {
+          "component_casefolded": "skills",
+          "dimension": "immediate_parent",
+          "example_paths": "26mitch26/ai-mall::.claude/skills/CLAUDE.md | Abhinavexists/claude-config::skills/CLAUDE.md | Alamator/claude-memory::.claude/skills/CLAUDE.md",
+          "file_count": 119,
+          "file_share_of_nested_files": 0.003377803008799319,
+          "occurrence_count": 119,
+          "rank": 20,
+          "repository_count": 107,
+          "repository_share_of_repositories_with_nested_files": 0.005285516696305078
+        }
+      ]
+    }
+  },
+  "path_quality": {
+    "anomalies": {},
+    "basename_casing": [
+      {
+        "basename": "CLAUDE.md",
+        "files": 103537
+      },
+      {
+        "basename": "claude.md",
+        "files": 4106
+      },
+      {
+        "basename": "Claude.md",
+        "files": 725
+      },
+      {
+        "basename": "CLAUDE.MD",
+        "files": 353
+      },
+      {
+        "basename": "Claude.MD",
+        "files": 16
+      },
+      {
+        "basename": "claude.MD",
+        "files": 14
+      },
+      {
+        "basename": "ClAUDE.md",
+        "files": 6
+      },
+      {
+        "basename": "CLAUDE.Md",
+        "files": 4
+      },
+      {
+        "basename": "CLAUDe.md",
+        "files": 1
+      },
+      {
+        "basename": "ClAUDE.MD",
+        "files": 1
+      },
+      {
+        "basename": "Claude.Md",
+        "files": 1
+      }
+    ]
+  },
+  "population": {
+    "files": 108764,
+    "files_in_multi_file_repositories": 21731,
+    "files_in_multi_file_repository_share": 0.19979956603287852,
+    "missing_content_files_in_overlap_population": 0,
+    "multi_file_repositories": 5205,
+    "multi_file_repository_share": 0.05643010472907045,
+    "nested_file_share": 0.32391232393071234,
+    "nested_files": 35230,
+    "null_content_hash_files": 0,
+    "repositories": 92238,
+    "repositories_with_nested_files": 20244,
+    "repositories_with_root_files": 73528,
+    "root_file_share": 0.6760876760692877,
+    "root_files": 73534,
+    "single_file_repositories": 87033
+  },
+  "repository_multiplicity": {
+    "bins": [
+      {
+        "file_count_bin": "1",
+        "file_share": 0.8002004339671215,
+        "files": 87033,
+        "repositories": 87033,
+        "repository_share": 0.9435698952709296
+      },
+      {
+        "file_count_bin": "2",
+        "file_share": 0.054264278621602734,
+        "files": 5902,
+        "repositories": 2951,
+        "repository_share": 0.03199332162449316
+      },
+      {
+        "file_count_bin": "3",
+        "file_share": 0.02452098120701703,
+        "files": 2667,
+        "repositories": 889,
+        "repository_share": 0.009638110106463713
+      },
+      {
+        "file_count_bin": "4",
+        "file_share": 0.015225626126291789,
+        "files": 1656,
+        "repositories": 414,
+        "repository_share": 0.004488388733493788
+      },
+      {
+        "file_count_bin": "5",
+        "file_share": 0.011354860063991761,
+        "files": 1235,
+        "repositories": 247,
+        "repository_share": 0.002677855113944361
+      },
+      {
+        "file_count_bin": "6-10",
+        "file_share": 0.02989040491339046,
+        "files": 3251,
+        "repositories": 442,
+        "repository_share": 0.004791951256532015
+      },
+      {
+        "file_count_bin": "11-20",
+        "file_share": 0.020972012798352396,
+        "files": 2281,
+        "repositories": 163,
+        "repository_share": 0.0017671675448296797
+      },
+      {
+        "file_count_bin": "21-50",
+        "file_share": 0.020070979368173293,
+        "files": 2183,
+        "repositories": 73,
+        "repository_share": 0.000791430863635378
+      },
+      {
+        "file_count_bin": "51-100",
+        "file_share": 0.01069287631937038,
+        "files": 1163,
+        "repositories": 18,
+        "repository_share": 0.00019514733623886033
+      },
+      {
+        "file_count_bin": ">100",
+        "file_share": 0.012807546614688683,
+        "files": 1393,
+        "repositories": 8,
+        "repository_share": 8.673214943949349e-05
+      }
+    ],
+    "distribution": {
+      "count": 92238,
+      "maximum": 308,
+      "mean": 1.1791669377046337,
+      "median": 1,
+      "minimum": 1,
+      "p25": 1,
+      "p75": 1,
+      "p90": 1,
+      "p95": 2,
+      "p99": 5
+    },
+    "top_repositories": [
+      {
+        "exact_files": 308,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 11,
+        "nested_files": 308,
+        "repo_full_name": "gabrielmoreira/agent-skills-mirror",
+        "root_files": 0
+      },
+      {
+        "exact_files": 241,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 4,
+        "nested_files": 241,
+        "repo_full_name": "TommyLike/KnowledgeBase",
+        "root_files": 0
+      },
+      {
+        "exact_files": 162,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 7,
+        "nested_files": 162,
+        "repo_full_name": "JSKIM-90/WEB_BUILDER_TOOLKIT",
+        "root_files": 0
+      },
+      {
+        "exact_files": 160,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 10,
+        "nested_files": 160,
+        "repo_full_name": "Conchylicultor/singularity",
+        "root_files": 0
+      },
+      {
+        "exact_files": 156,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 7,
+        "nested_files": 156,
+        "repo_full_name": "mind-protocol/serenissima",
+        "root_files": 0
+      },
+      {
+        "exact_files": 145,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 8,
+        "nested_files": 145,
+        "repo_full_name": "Recusive/Orbit-Code",
+        "root_files": 0
+      },
+      {
+        "exact_files": 113,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 2,
+        "nested_files": 113,
+        "repo_full_name": "jwalsh/builder-workspace",
+        "root_files": 0
+      },
+      {
+        "exact_files": 108,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 6,
+        "nested_files": 108,
+        "repo_full_name": "faionfaion/faion-network",
+        "root_files": 0
+      },
+      {
+        "exact_files": 99,
+        "location_configuration": "root_and_nested",
+        "maximum_directory_depth": 11,
+        "nested_files": 98,
+        "repo_full_name": "David-Li0406/meta-skill-evloving",
+        "root_files": 1
+      },
+      {
+        "exact_files": 94,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 9,
+        "nested_files": 94,
+        "repo_full_name": "AyayaXiaowang/Ayaya_Miliastra_Editor",
+        "root_files": 0
+      },
+      {
+        "exact_files": 72,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 2,
+        "nested_files": 72,
+        "repo_full_name": "ThomasMoreAI/legal-skills-open",
+        "root_files": 0
+      },
+      {
+        "exact_files": 70,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 2,
+        "nested_files": 70,
+        "repo_full_name": "hasna/skills",
+        "root_files": 0
+      },
+      {
+        "exact_files": 69,
+        "location_configuration": "root_and_nested",
+        "maximum_directory_depth": 6,
+        "nested_files": 68,
+        "repo_full_name": "Jason-hub-star/TaillogToss",
+        "root_files": 1
+      },
+      {
+        "exact_files": 68,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 8,
+        "nested_files": 68,
+        "repo_full_name": "bhagyabanghadai/XBandGlobal",
+        "root_files": 0
+      },
+      {
+        "exact_files": 67,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 4,
+        "nested_files": 67,
+        "repo_full_name": "EffortlessMetrics/copybook-rs",
+        "root_files": 0
+      },
+      {
+        "exact_files": 65,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 5,
+        "nested_files": 65,
+        "repo_full_name": "LilyDesignSystem/lily-design-system",
+        "root_files": 0
+      },
+      {
+        "exact_files": 63,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 3,
+        "nested_files": 63,
+        "repo_full_name": "Intuned/cookbook",
+        "root_files": 0
+      },
+      {
+        "exact_files": 61,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 2,
+        "nested_files": 61,
+        "repo_full_name": "hasna/connectors",
+        "root_files": 0
+      },
+      {
+        "exact_files": 59,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 5,
+        "nested_files": 59,
+        "repo_full_name": "vtsgroup/vfit",
+        "root_files": 0
+      },
+      {
+        "exact_files": 57,
+        "location_configuration": "nested_only",
+        "maximum_directory_depth": 2,
+        "nested_files": 57,
+        "repo_full_name": "cypress-io/cypress",
+        "root_files": 0
+      }
+    ]
+  },
+  "scope": "exact-claude",
+  "scope_definition": "case-insensitive basename equal to CLAUDE.md; stored GitHub paths use POSIX '/' separators",
+  "within_repository_exact_reuse": {
+    "exact_duplicate_groups": 1273,
+    "exact_duplicate_pairs": 34084,
+    "file_share_in_exact_duplicate_groups": 0.04987863631348608,
+    "files_in_exact_duplicate_groups": 5425,
+    "multi_file_population_share_in_exact_duplicate_groups": 0.24964336661911554,
+    "multi_file_repository_share_with_exact_duplicate_groups": 0.21268011527377523,
+    "repeated_exact_instance_share": 0.03817439593983303,
+    "repeated_exact_instances": 4152,
+    "repositories_with_exact_duplicate_groups": 1107,
+    "repository_share_with_exact_duplicate_groups": 0.012001561178689911
+  },
+  "within_repository_normalized_line_overlap": {
+    "candidate_file_pairs": 245390,
+    "evaluated_different_hash_pairs": 211306,
+    "files_in_reported_pairs": 853,
+    "interpretation": "exploratory lexical-overlap indicators; not validated semantic classifications of duplication, inheritance, or override behavior",
+    "multi_file_population_share_in_reported_pairs": 0.039252680502507936,
+    "multi_file_repository_share_with_reported_pairs": 0.03919308357348703,
+    "pair_counts_by_relation": {
+      "high_containment": 276,
+      "high_jaccard": 595,
+      "normalized_equivalent": 328
+    },
+    "reported_pairs": 1199,
+    "repositories_with_reported_pairs": 204,
+    "repository_counts_by_relation": {
+      "high_containment": 65,
+      "high_jaccard": 125,
+      "normalized_equivalent": 33
+    }
+  }
+}

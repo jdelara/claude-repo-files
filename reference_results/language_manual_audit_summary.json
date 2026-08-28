@@ -1,0 +1,89 @@
+{
+  "abstentions": {
+    "detector_matches_manual_language": {
+      "both": 18,
+      "fasttext_only": 15,
+      "lingua_only": 1,
+      "neither": 11
+    },
+    "manual_languages": {
+      "en": 21,
+      "es": 5,
+      "fr": 2,
+      "it": 1,
+      "mixed": 2,
+      "mr": 10,
+      "pt": 2,
+      "vi": 1,
+      "zh": 1
+    },
+    "reviewed": 45
+  },
+  "accepted_labels": {
+    "by_language": {
+      "de": {
+        "correct": 5
+      },
+      "en": {
+        "correct": 5
+      },
+      "es": {
+        "correct": 5
+      },
+      "fr": {
+        "correct": 5
+      },
+      "it": {
+        "correct": 5
+      },
+      "ja": {
+        "correct": 4
+      },
+      "ko": {
+        "correct": 5
+      },
+      "pt": {
+        "correct": 5
+      },
+      "ru": {
+        "correct": 5
+      },
+      "zh": {
+        "correct": 5
+      }
+    },
+    "correct": 49,
+    "decisive": 49,
+    "incorrect": 0,
+    "observed_precision": 1.0,
+    "reviewed": 49,
+    "wilson_95_percent_interval": [
+      0.9273021807795035,
+      0.9999999999999999
+    ]
+  },
+  "audit_rows": 95,
+  "input_format": {
+    "delimiter": "semicolon",
+    "encoding": "cp1252"
+  },
+  "reviewed_by_stratum": {
+    "accepted:de": 5,
+    "accepted:en": 5,
+    "accepted:es": 5,
+    "accepted:fr": 5,
+    "accepted:it": 5,
+    "accepted:ja": 5,
+    "accepted:ko": 5,
+    "accepted:pt": 5,
+    "accepted:ru": 5,
+    "accepted:zh": 5,
+    "detector_disagreement": 20,
+    "stability_or_script": 10,
+    "threshold_rejection": 15
+  },
+  "reviewed_rows": 95,
+  "status": "review_complete_or_in_progress",
+  "uncertain_reviewed_rows": 1,
+  "unreviewed_rows": 0
+}

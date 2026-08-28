@@ -1,0 +1,279 @@
+{
+  "all_detected_tokens": {
+    "context_counts": {
+      "fenced_code": 40097,
+      "html_comment": 153,
+      "inline_code": 63611,
+      "plain_text": 36208
+    },
+    "decision_counts": {
+      "excluded_fenced_code": 40097,
+      "excluded_html_comment": 153,
+      "excluded_inline_code": 63611,
+      "excluded_non_file_target": 8175,
+      "excluded_unsupported_pattern": 127,
+      "excluded_unsupported_uri": 11,
+      "excluded_unsupported_variable": 10,
+      "import_candidate": 27885
+    },
+    "occurrences": 140069
+  },
+  "analysis": "Claude @path import-syntax candidates (Phase 2r)",
+  "artifact_rows": {
+    "comparison": 30,
+    "files": 108764,
+    "occurrences": 140069,
+    "strata": 267,
+    "targets": 30702
+  },
+  "database": {
+    "path": "mined.db",
+    "sha256_after": "29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442",
+    "sha256_before": "29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442",
+    "sha256_unchanged": true,
+    "sqlite_library_version": "3.49.1",
+    "sqlite_total_changes": 0
+  },
+  "detector_version": "phase2r_at_path_v1",
+  "documentation": {
+    "accessed": "2026-07-29",
+    "documented_max_recursive_hops": 4,
+    "url": "https://code.claude.com/docs/en/memory#import-additional-files"
+  },
+  "import_syntax_candidates": {
+    "ambiguous_bare_extensionless_occurrences": 6576,
+    "distinct_source_target_edges": 24475,
+    "explicit_path_shape_file_share": 0.11590232062079364,
+    "explicit_path_shape_files": 12606,
+    "explicit_path_shape_occurrences": 21309,
+    "explicit_path_shape_repositories": 10719,
+    "explicit_path_shape_repository_share": 0.11621023873024133,
+    "external_or_repository_escape_occurrences": 956,
+    "file_share": 0.13441028281416645,
+    "files": 14619,
+    "leading_target_basenames": [
+      {
+        "occurrences": 6726,
+        "target_basename": "agents.md"
+      },
+      {
+        "occurrences": 506,
+        "target_basename": "react"
+      },
+      {
+        "occurrences": 436,
+        "target_basename": "claude.md"
+      },
+      {
+        "occurrences": 366,
+        "target_basename": "readme.md"
+      },
+      {
+        "occurrences": 209,
+        "target_basename": "core"
+      },
+      {
+        "occurrences": 205,
+        "target_basename": "sdk"
+      },
+      {
+        "occurrences": 194,
+        "target_basename": "architecture.md"
+      },
+      {
+        "occurrences": 178,
+        "target_basename": "import"
+      },
+      {
+        "occurrences": 173,
+        "target_basename": "tailwind"
+      },
+      {
+        "occurrences": 161,
+        "target_basename": "skill.md"
+      },
+      {
+        "occurrences": 140,
+        "target_basename": "rtk.md"
+      },
+      {
+        "occurrences": 122,
+        "target_basename": "dnd-kit"
+      },
+      {
+        "occurrences": 112,
+        "target_basename": "ui"
+      },
+      {
+        "occurrences": 110,
+        "target_basename": "mention"
+      },
+      {
+        "occurrences": 97,
+        "target_basename": "react-query"
+      },
+      {
+        "occurrences": 96,
+        "target_basename": "vite-plugin-wayfinder"
+      },
+      {
+        "occurrences": 95,
+        "target_basename": "observable"
+      },
+      {
+        "occurrences": 90,
+        "target_basename": "theme"
+      },
+      {
+        "occurrences": 89,
+        "target_basename": "testing.md"
+      },
+      {
+        "occurrences": 83,
+        "target_basename": "mentions"
+      },
+      {
+        "occurrences": 81,
+        "target_basename": "param"
+      },
+      {
+        "occurrences": 81,
+        "target_basename": "link"
+      },
+      {
+        "occurrences": 78,
+        "target_basename": "cli"
+      },
+      {
+        "occurrences": 76,
+        "target_basename": "vite"
+      },
+      {
+        "occurrences": 75,
+        "target_basename": "contributing.md"
+      }
+    ],
+    "occurrences": 27885,
+    "occurrences_per_candidate_file": {
+      "count": 14619,
+      "maximum": 161,
+      "mean": 1.90744920993228,
+      "median": 1,
+      "minimum": 1,
+      "p25": 1,
+      "p75": 2,
+      "p90": 4,
+      "p95": 6,
+      "p99": 12
+    },
+    "path_kind_counts": {
+      "home_relative": 342,
+      "platform_relative": 22,
+      "posix_absolute": 476,
+      "relative": 27018,
+      "windows_absolute": 27
+    },
+    "path_relation_counts": {
+      "ancestor_directory": 289,
+      "descendant_directory": 11337,
+      "external_absolute": 503,
+      "external_home": 342,
+      "other_directory": 275,
+      "outside_repository": 111,
+      "platform_dependent": 22,
+      "same_directory": 15006
+    },
+    "repositories": 12628,
+    "repository_internal_nonself_occurrences": 26889,
+    "repository_share": 0.13690669789024046,
+    "self_reference_occurrences": 18,
+    "surface_form_counts": {
+      "list_item_only": 422,
+      "prose_embedded": 16412,
+      "standalone_formatted": 482,
+      "whole_line": 10569
+    },
+    "target_extension_class_counts": {
+      "extensionless": 13142,
+      "markdown": 13667,
+      "other_extension": 1076
+    },
+    "target_shape_counts": {
+      "bare_extensionless": 6576,
+      "dotfile_extensionless": 17,
+      "markdown_file": 13667,
+      "other_extension_file": 1076,
+      "path_extensionless": 6549
+    }
+  },
+  "limitations": [
+    "The official documentation does not publish a complete character-level token grammar; this is a versioned operational detector.",
+    "A syntactic candidate can be a social @mention, scoped package name, or nonexistent path until a revision-aligned tree is checked.",
+    "The database does not contain complete repository trees or imported target content, so existence and recursive expansion are unverified.",
+    "Absolute and home-relative imports may require external-import approval; approval state is not observable here.",
+    "HTML comment spans are excluded operationally; runtime parser ordering should be verified with a versioned fixture before stronger claims.",
+    "Backslash-relative paths are retained as platform-dependent rather than resolved against POSIX GitHub paths."
+  ],
+  "operational_rules": {
+    "backslash_relative_paths_are_platform_dependent": true,
+    "blank_lines_fences_and_block_comments_break_inline_code_pairing": true,
+    "email_and_identifier_internal_at_signs_excluded_by_left_boundary": true,
+    "fenced_code_excluded": true,
+    "html_comment_spans_excluded": true,
+    "inline_code_precedes_inline_html_comment_classification": true,
+    "inline_code_spans_excluded": true,
+    "inline_code_uses_equal_backtick_runs_and_may_span_nonblank_lines": true,
+    "leading_posix_slash_is_filesystem_absolute_not_repository_root": true,
+    "markdown_extension_required": false,
+    "plain_text_at_path_tokens_are_candidates": true,
+    "recursive_expansion_performed": false,
+    "relative_paths_resolve_against_containing_claude_file": true,
+    "runtime_loading_observed": false,
+    "spaces_terminate_targets": true,
+    "target_existence_checked": false,
+    "undocumented_globs_and_template_patterns_excluded": true,
+    "uri_schemes_excluded": true,
+    "variable_interpolation_forms_excluded": true,
+    "whole_line_required": false
+  },
+  "phase2_comparison": {
+    "comparison_enabled": true,
+    "high_confidence_input_counts_by_intent": {
+      "direct_inclusion": 10511,
+      "instructional_delegation": 14323
+    },
+    "input_path": "article/claude_markdown_reference_occurrences.csv",
+    "input_sha256": "4432bc8d24cf65e6089d7660bbad2a503223ec34658338b7b8dba5e8cd3217bb",
+    "transition_counts": {
+      "excluded_token_without_phase2_high_confidence_match_excluded_fenced_code": 40097,
+      "excluded_token_without_phase2_high_confidence_match_excluded_html_comment": 152,
+      "excluded_token_without_phase2_high_confidence_match_excluded_inline_code": 63419,
+      "excluded_token_without_phase2_high_confidence_match_excluded_non_file_target": 8175,
+      "excluded_token_without_phase2_high_confidence_match_excluded_unsupported_pattern": 119,
+      "excluded_token_without_phase2_high_confidence_match_excluded_unsupported_uri": 11,
+      "excluded_token_without_phase2_high_confidence_match_excluded_unsupported_variable": 10,
+      "import_candidate_without_phase2_high_confidence_match": 16495,
+      "phase2_delegation_also_import_candidate": 959,
+      "phase2_delegation_reclassified_excluded_inline_code": 161,
+      "phase2_direct_inclusion_without_phase2r_token": 40,
+      "phase2_direct_reclassified_excluded_html_comment": 1,
+      "phase2_direct_reclassified_excluded_inline_code": 31,
+      "phase2_direct_reclassified_excluded_unsupported_pattern": 8,
+      "phase2_direct_retained_as_import_candidate": 10431,
+      "phase2_instructional_delegation_without_phase2r_token": 13203
+    },
+    "unmatched_counts_by_intent_and_syntax": {
+      "direct_inclusion|comment_include": 40,
+      "instructional_delegation|markdown_link": 2103,
+      "instructional_delegation|path_mention": 11100
+    },
+    "unmatched_phase2_high_confidence_occurrences": 13243
+  },
+  "population": {
+    "files": 108764,
+    "files_with_any_detected_at_path_token": 32501,
+    "files_with_any_detected_at_path_token_share": 0.29882130116582695,
+    "repositories": 92238
+  },
+  "population_definition": "files whose stored POSIX path has a case-insensitive basename equal to CLAUDE.md"
+}

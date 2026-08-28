@@ -1,0 +1,96 @@
+# Catalog of diagram/modeling notations and DSLs the NotationAnalyzer looks
+# for inside markdown files (class diagrams, state machines, sequence
+# diagrams, grammars, etc.).
+#
+# To add a new notation: add an entry below. The generic engine picks it up
+# automatically for detection + counting + confidence-tagged snippet
+# extraction. No code changes needed.
+#
+# For deeper structural parsing (extracting nodes/edges/states rather than
+# just a raw snippet), register a parser function in
+# miner/analyzers/notation_parsers.py keyed by this entry's `id`. Notations
+# without a registered parser still get detected/counted/snippeted; they
+# just fall back to a generic arrow/keyword count for "structure".
+#
+# Fields:
+#   id                  - short unique identifier
+#   name                - human readable name
+#   fence_languages     - code-fence language tags that identify this notation
+#                         with high confidence, e.g. ```mermaid
+#   boundary_markers    - [start, end] literal markers that bound a block even
+#                         outside a fenced code block (e.g. @startuml/@enduml)
+#   subtype_markers     - map of subtype -> list of substrings checked against
+#                         the first non-blank line of the block, to classify
+#                         e.g. mermaid flowchart vs sequence vs state vs class
+#   untagged_heuristics - substrings/patterns that, if found in a code block
+#                         with NO recognized language tag, suggest this
+#                         notation is present anyway (lower confidence)
+
+notations:
+  - id: mermaid
+    name: "Mermaid"
+    fence_languages: ["mermaid"]
+    subtype_markers:
+      flowchart: ["graph ", "graph;", "flowchart "]
+      sequence: ["sequenceDiagram"]
+      state: ["stateDiagram"]
+      class: ["classDiagram"]
+      er: ["erDiagram"]
+      gantt: ["gantt"]
+      journey: ["journey"]
+      pie: ["pie "]
+    untagged_heuristics: ["sequenceDiagram", "classDiagram", "stateDiagram", "erDiagram"]
+
+  - id: plantuml
+    name: "PlantUML"
+    fence_languages: ["plantuml", "puml", "uml"]
+    boundary_markers: ["@startuml", "@enduml"]
+    subtype_markers:
+      sequence: ["participant ", "actor "]
+      class: ["class ", "interface "]
+      state: ["state "]
+      usecase: ["usecase "]
+    untagged_heuristics: ["@startuml"]
+
+  - id: graphviz
+    name: "Graphviz / DOT"
+    fence_languages: ["dot", "graphviz"]
+    subtype_markers:
+      directed: ["digraph"]
+      undirected: ["graph "]
+    untagged_heuristics: ["digraph ", "digraph{", "rankdir="]
+
+  - id: d2
+    name: "D2"
+    fence_languages: ["d2"]
+    untagged_heuristics: []
+
+  - id: ascii_diagram
+    name: "ASCII / box-drawing diagram"
+    fence_languages: ["ascii", "asciiart"]
+    untagged_heuristics:
+      # box-drawing unicode chars, or classic ascii-art box/arrow chars
+      # appearing repeatedly within a block
+      - "[┌┐└┘├┤┬┴┼─│]"
+      - "\\+[-]{2,}\\+"
+      - "<-{2,}>|-{2,}>|<-{2,}"
+
+  - id: bnf_ebnf
+    name: "BNF / EBNF grammar"
+    fence_languages: ["bnf", "ebnf", "abnf"]
+    untagged_heuristics: ["::="]
+
+  - id: regex_dsl
+    name: "Regular expression listing"
+    fence_languages: ["regex", "regexp"]
+    untagged_heuristics: []
+
+  - id: json_schema
+    name: "JSON Schema"
+    fence_languages: ["json"]
+    untagged_heuristics: ["\"$schema\"", "\"type\": \"object\"", "\"properties\":"]
+
+  - id: yaml_schema
+    name: "YAML-defined schema/spec"
+    fence_languages: ["yaml", "yml"]
+    untagged_heuristics: ["openapi:", "swagger:", "$schema:"]

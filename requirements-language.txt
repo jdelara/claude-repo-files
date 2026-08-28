@@ -1,0 +1,5 @@
+# Optional dependencies for scripts/paragraph_language_stats.py.
+# They are separate because the language detectors and model are large.
+fasttext-predict==0.9.2.4
+lingua-language-detector==2.2.0
+

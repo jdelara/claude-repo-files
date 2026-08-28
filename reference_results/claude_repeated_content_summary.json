@@ -1,0 +1,660 @@
+{
+  "analysis": "automatic form classification of repository-local exact CLAUDE.md reuse",
+  "categories": [
+    {
+      "category": "pointer_shim",
+      "file_share": 0.4753917050691244,
+      "files": 2579,
+      "repeated_instance_share": 0.4694123314065511,
+      "repeated_instances": 1949,
+      "repositories": 603,
+      "repository_group_share": 0.4948939512961508,
+      "repository_groups": 630,
+      "unique_content_share": 0.33278418451400327,
+      "unique_contents": 202
+    },
+    {
+      "category": "empty_placeholder",
+      "file_share": 0.17935483870967742,
+      "files": 973,
+      "repeated_instance_share": 0.20857418111753373,
+      "repeated_instances": 866,
+      "repositories": 103,
+      "repository_group_share": 0.0840534171249018,
+      "repository_groups": 107,
+      "unique_content_share": 0.014827018121911038,
+      "unique_contents": 9
+    },
+    {
+      "category": "generated_context",
+      "file_share": 0.10875576036866359,
+      "files": 590,
+      "repeated_instance_share": 0.10428709055876687,
+      "repeated_instances": 433,
+      "repositories": 136,
+      "repository_group_share": 0.12333071484681854,
+      "repository_groups": 157,
+      "unique_content_share": 0.09884678747940692,
+      "unique_contents": 60
+    },
+    {
+      "category": "template_scaffold",
+      "file_share": 0.007741935483870968,
+      "files": 42,
+      "repeated_instance_share": 0.009633911368015413,
+      "repeated_instances": 40,
+      "repositories": 1,
+      "repository_group_share": 0.0015710919088766694,
+      "repository_groups": 2,
+      "unique_content_share": 0.0032948929159802307,
+      "unique_contents": 2
+    },
+    {
+      "category": "substantive_repeated_document",
+      "file_share": 0.16903225806451613,
+      "files": 917,
+      "repeated_instance_share": 0.15269749518304432,
+      "repeated_instances": 634,
+      "repositories": 227,
+      "repository_group_share": 0.22230950510604872,
+      "repository_groups": 283,
+      "unique_content_share": 0.400329489291598,
+      "unique_contents": 243
+    },
+    {
+      "category": "short_ambiguous",
+      "file_share": 0.05972350230414747,
+      "files": 324,
+      "repeated_instance_share": 0.05539499036608863,
+      "repeated_instances": 230,
+      "repositories": 69,
+      "repository_group_share": 0.07384131971720345,
+      "repository_groups": 94,
+      "unique_content_share": 0.14991762767710048,
+      "unique_contents": 91
+    }
+  ],
+  "classifier_version": "phase1b-v1",
+  "confidence": [
+    {
+      "confidence": "high",
+      "unique_content_share": 0.729818780889621,
+      "unique_contents": 443
+    },
+    {
+      "confidence": "low",
+      "unique_content_share": 0.14991762767710048,
+      "unique_contents": 91
+    },
+    {
+      "confidence": "medium",
+      "unique_content_share": 0.12026359143327842,
+      "unique_contents": 73
+    }
+  ],
+  "definitions": {
+    "classification_unit": "unique SHA-256 content hash classified once",
+    "empty_placeholder": "no substantive characters after generic title/comments, an empty paired tag block, or a recognized placeholder phrase",
+    "generated_context": "explicit generated/context marker within the first 1,500 characters",
+    "path_context_tags": "secondary lexical tags from directory-component names; not intent classifications",
+    "pointer_shim": "short reference-only or reference-directed document under an explicit residual-word rule",
+    "repeated_instance": "group copies minus one",
+    "repository_group": "one (repo_full_name, content_hash) with at least two exact CLAUDE.md paths",
+    "short_ambiguous": "does not meet a higher-precision form rule",
+    "substantive_repeated_document": "meets at least one configured word, non-empty-line, or byte threshold after higher-priority rules",
+    "template_scaffold": "explicit self-description as a template, scaffold, starter, or clone-and-customize document within the first 2,000 characters"
+  },
+  "interpretation": "automatic form labels with evidence-bearing deterministic rules; manual validation is required before semantic or prevalence claims",
+  "largest_groups_by_category": {
+    "empty_placeholder": [
+      {
+        "copies": 65,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "bhagyabanghadai/XBandGlobal",
+        "representative_path": ".claude/hooks/config/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 59,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "vtsgroup/vfit",
+        "representative_path": ".claude/docs/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 43,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "James99309/PMA",
+        "representative_path": ".claude/hooks/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 39,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "nixlim/cortex",
+        "representative_path": ".beads/hooks/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 33,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "chintanmehta21/Zettelkasten_KG",
+        "representative_path": ".github/workflows/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 32,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "ericmwr/PaintFactor_Dev_OS",
+        "representative_path": "Claude/.claude/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 31,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "naporin0624/cartesia-download",
+        "representative_path": ".claude/rules/CLAUDE.md",
+        "size_bytes": 44,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 27,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "xkonjin/writing-improver",
+        "representative_path": ".omc/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 24,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "trantnguyen62/tranthachnguyen-apps",
+        "representative_path": "cloudify/app/(dashboard)/analytics/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      },
+      {
+        "copies": 22,
+        "evidence": "empty paired tag(s): claude-mem-context",
+        "repo_full_name": "CamiloYate09/slad_plataform",
+        "representative_path": ".claude/commands/openspec/CLAUDE.md",
+        "size_bytes": 43,
+        "subtype": "empty_generated_block"
+      }
+    ],
+    "generated_context": [
+      {
+        "copies": 15,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "getdatasurge/fresh-staged",
+        "representative_path": ".planning/quick/001-remove-supabase-references-from-readme-a/CLAUDE.md",
+        "size_bytes": 170,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 15,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "repodrnet/GarageManager",
+        "representative_path": "garagemanager.client/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 12,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "awjames6875/safe-harbor-credential-app",
+        "representative_path": "chrome-extension/icons/safe-harbor-credentialing/chrome-extension/background/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 11,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "Flickinny11/kriptik-engine",
+        "representative_path": "client/client/src/**/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 11,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "karlng279/ai-ready-product-workflow-v2",
+        "representative_path": ".agent/skills/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 11,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "shashanksaxena-tz/BabyGo-",
+        "representative_path": "backend/src/config/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 11,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "Tr0nYx/cs2-demo-cheat-detection",
+        "representative_path": ".planning/.planning/phases/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 10,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "dong99u/marvelring",
+        "representative_path": ".omc/plans/CLAUDE.md",
+        "size_bytes": 169,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 10,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "Jarkius/The-Oracle-Construct",
+        "representative_path": "src/core/db/CLAUDE.md",
+        "size_bytes": 348,
+        "subtype": "claude_mem_context"
+      },
+      {
+        "copies": 10,
+        "evidence": "<claude-mem-context>",
+        "repo_full_name": "joemccann/dillinger",
+        "representative_path": "app/api/dropbox/callback/CLAUDE.md",
+        "size_bytes": 343,
+        "subtype": "claude_mem_context"
+      }
+    ],
+    "pointer_shim": [
+      {
+        "copies": 107,
+        "evidence": "direct_include:AGENTS.md",
+        "repo_full_name": "faionfaion/faion-network",
+        "representative_path": "skills/faion/knowledge/ai-core/inference-cost-unit-economics/CLAUDE.md",
+        "size_bytes": 11,
+        "subtype": "direct_include_only"
+      },
+      {
+        "copies": 63,
+        "evidence": "direct_include:../AGENTS.md",
+        "repo_full_name": "Intuned/cookbook",
+        "representative_path": "python-examples/auth-with-email-otp/.claude/CLAUDE.md",
+        "size_bytes": 13,
+        "subtype": "direct_include_only"
+      },
+      {
+        "copies": 40,
+        "evidence": "path_mention:../criteria.md",
+        "repo_full_name": "Butanium/sarcasm-persona-exploration",
+        "representative_path": "experiments/exp_001_phase1_replication/judging/batch_001/CLAUDE.md",
+        "size_bytes": 14,
+        "subtype": "path_only"
+      },
+      {
+        "copies": 40,
+        "evidence": "direct_include:AGENTS.md",
+        "repo_full_name": "Mioframe/mioframe",
+        "representative_path": "src/app/CLAUDE.md",
+        "size_bytes": 42,
+        "subtype": "direct_include_only"
+      },
+      {
+        "copies": 37,
+        "evidence": "path_mention:SKILL.md",
+        "repo_full_name": "bullishoptionstrat-hub/GMG-vs1",
+        "representative_path": ".agents/skills/agent-browser-clawdbot/CLAUDE.md",
+        "size_bytes": 10,
+        "subtype": "path_only"
+      },
+      {
+        "copies": 33,
+        "evidence": "direct_include:AGENTS.md",
+        "repo_full_name": "LilyDesignSystem/lily-design-system",
+        "representative_path": "components/accordion-list/CLAUDE.md",
+        "size_bytes": 11,
+        "subtype": "direct_include_only"
+      },
+      {
+        "copies": 32,
+        "evidence": "markdown_link:AGENTS.md; direct_include:AGENTS.md",
+        "repo_full_name": "microsoft-foundry/foundry-samples",
+        "representative_path": "samples/csharp/hosted-agents/agent-framework/a2a/01-delegation/executor/CLAUDE.md",
+        "size_bytes": 182,
+        "subtype": "direct_include_with_explanation"
+      },
+      {
+        "copies": 29,
+        "evidence": "direct_include:AGENTS.md",
+        "repo_full_name": "Altinn/altinn-studio",
+        "representative_path": "app-libs/CLAUDE.md",
+        "size_bytes": 24,
+        "subtype": "direct_include_only"
+      },
+      {
+        "copies": 29,
+        "evidence": "path_mention:SKILL.md",
+        "repo_full_name": "bullishoptionstrat-hub/Quantum-Options-Flow-06-14",
+        "representative_path": ".agents/skills/agentmail/CLAUDE.md",
+        "size_bytes": 10,
+        "subtype": "path_only"
+      },
+      {
+        "copies": 29,
+        "evidence": "path_mention:../.workspace-rules/liferay-rules.md",
+        "repo_full_name": "liferay/liferay-portal",
+        "representative_path": "workspaces/clarity-solution-workspace/.claude/CLAUDE.md",
+        "size_bytes": 36,
+        "subtype": "path_only"
+      }
+    ],
+    "short_ambiguous": [
+      {
+        "copies": 25,
+        "evidence": "words=1; nonempty_lines=1; references=0",
+        "repo_full_name": "shibuiwilliam/archfit",
+        "representative_path": "packs/agent-tool/fixtures/P2.SPC.010-negative/input/CLAUDE.md",
+        "size_bytes": 10,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 22,
+        "evidence": "words=2; nonempty_lines=1; references=0",
+        "repo_full_name": "lckx777/copy-chief-black",
+        "representative_path": "framework/commands/CLAUDE.md",
+        "size_bytes": 18,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 13,
+        "evidence": "words=5; nonempty_lines=1; references=1",
+        "repo_full_name": "didi/mpx",
+        "representative_path": "packages/api-proxy/CLAUDE.md",
+        "size_bytes": 33,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 13,
+        "evidence": "words=3; nonempty_lines=1; references=0",
+        "repo_full_name": "reporails/rules",
+        "representative_path": "agents/codex/rules/codex-reads-agents-override-md-first-then-agents-md-then-fal/tests/fail/CLAUDE.md",
+        "size_bytes": 27,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 12,
+        "evidence": "words=2; nonempty_lines=1; references=0",
+        "repo_full_name": "reporails/rules",
+        "representative_path": "core/content/agent-neutral-main-file/tests/pass/CLAUDE.md",
+        "size_bytes": 19,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 8,
+        "evidence": "words=18; nonempty_lines=1; references=0",
+        "repo_full_name": "Sloosmore/outcomes-optimizer",
+        "representative_path": "packages/agent-core/src/CLAUDE.md",
+        "size_bytes": 124,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 7,
+        "evidence": "words=23; nonempty_lines=2; references=0",
+        "repo_full_name": "andreylukin/bough",
+        "representative_path": "bench/tasks/bugfix-crossmodule/fixture/CLAUDE.md",
+        "size_bytes": 129,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 7,
+        "evidence": "words=3; nonempty_lines=1; references=1",
+        "repo_full_name": "tri-star/sanposcape",
+        "representative_path": ".claude/skills/launch-project/assets/initial-contents/CLAUDE.md",
+        "size_bytes": 42,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 6,
+        "evidence": "words=5; nonempty_lines=1; references=1",
+        "repo_full_name": "justty32/ai_core",
+        "representative_path": "CLAUDE.md",
+        "size_bytes": 33,
+        "subtype": "no_high_precision_form_rule"
+      },
+      {
+        "copies": 6,
+        "evidence": "words=3; nonempty_lines=1; references=1",
+        "repo_full_name": "tri-star/tasche",
+        "representative_path": ".agents/skills/launch-project/assets/initial-contents/CLAUDE.md",
+        "size_bytes": 42,
+        "subtype": "no_high_precision_form_rule"
+      }
+    ],
+    "substantive_repeated_document": [
+      {
+        "copies": 46,
+        "evidence": "words=786; nonempty_lines=94; bytes=6054",
+        "repo_full_name": "hadrianbelove-stack/new-release-wall",
+        "representative_path": "museum_legacy/_archive/legacy/_sync_tmp_20250829-213156Z/NRW_SINGLE_HANDOFF_20250827-213055 2/CLAUDE.md",
+        "size_bytes": 6054,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 30,
+        "evidence": "words=172; nonempty_lines=4; bytes=1445",
+        "repo_full_name": "917135271/blackbox-eval",
+        "representative_path": "runs/gate3_development/ccb-baseline/DEV-001/workspace/CLAUDE.md",
+        "size_bytes": 1445,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 23,
+        "evidence": "words=53; nonempty_lines=9; bytes=380",
+        "repo_full_name": "dgulati352-cpu/agrilog",
+        "representative_path": ".aider-desk/skills/firebase-basics/references/refresh/claude.md",
+        "size_bytes": 380,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 16,
+        "evidence": "words=467; nonempty_lines=9; bytes=3458",
+        "repo_full_name": "917135271/blackbox-eval",
+        "representative_path": "runs/gate2_domain_enhancement/codex/workspace/CLAUDE.md",
+        "size_bytes": 3458,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 14,
+        "evidence": "words=406; nonempty_lines=78; bytes=3653",
+        "repo_full_name": "gtynnn060110-hash/Continual-Skill-Bench",
+        "representative_path": "tasks/finance-econ-independent-trials/finance-econ-ind-007/environment/skills/skills-finance/CLAUDE.md",
+        "size_bytes": 3653,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 12,
+        "evidence": "words=53; nonempty_lines=7; bytes=376",
+        "repo_full_name": "Fitz45/GPS-DATA",
+        "representative_path": "E ESEAL WEB/.adal/skills/firebase-basics/references/refresh/claude.md",
+        "size_bytes": 376,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 12,
+        "evidence": "words=53; nonempty_lines=7; bytes=376",
+        "repo_full_name": "tuanfit/translator_jiajun_app",
+        "representative_path": ".adal/skills/firebase-basics/references/refresh/claude.md",
+        "size_bytes": 376,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 11,
+        "evidence": "words=53; nonempty_lines=7; bytes=376",
+        "repo_full_name": "mertfozzy/BerilTracker",
+        "representative_path": ".adal/skills/firebase-basics/references/refresh/claude.md",
+        "size_bytes": 376,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 10,
+        "evidence": "words=417; nonempty_lines=65; bytes=3402",
+        "repo_full_name": "Kaastor/reinforcement-learning",
+        "representative_path": "1-foundational/Policy-Value-Iteration/app/CLAUDE.md",
+        "size_bytes": 3402,
+        "subtype": "size_or_structure_threshold"
+      },
+      {
+        "copies": 10,
+        "evidence": "words=53; nonempty_lines=7; bytes=376",
+        "repo_full_name": "kraussmktdigital-beep/rotaeducaexpert",
+        "representative_path": ".adal/skills/firebase-basics/references/refresh/claude.md",
+        "size_bytes": 376,
+        "subtype": "size_or_structure_threshold"
+      }
+    ],
+    "template_scaffold": [
+      {
+        "copies": 36,
+        "evidence": "scaffold-connector is a TypeScript template for building API connector CLIs. It provides multi-profile configuration, Bearer token authentication (customizable), OAuth2 support, and a clean CLI structure using Commander.\u2026",
+        "repo_full_name": "hasna/connectors",
+        "representative_path": "connectors/airbrake/CLAUDE.md",
+        "size_bytes": 6999,
+        "subtype": "template_for"
+      },
+      {
+        "copies": 6,
+        "evidence": "scaffold-connector is a TypeScript template for building API connector CLIs. It provides multi-profile configuration, Bearer token authentication (customizable), and a clean CLI structure using Commander.js.",
+        "repo_full_name": "hasna/connectors",
+        "representative_path": "connectors/anyscale/CLAUDE.md",
+        "size_bytes": 3309,
+        "subtype": "template_for"
+      }
+    ]
+  },
+  "parameters": {
+    "audit_per_category": 10,
+    "audit_seed": 20260727,
+    "pointer_max_residual_words": 60,
+    "substantive_min_bytes": 500,
+    "substantive_min_nonempty_lines": 8,
+    "substantive_min_words": 50
+  },
+  "path_context_tags": [
+    {
+      "files": 375,
+      "repository_groups": 64,
+      "tag": "benchmark_or_run"
+    },
+    {
+      "files": 545,
+      "repository_groups": 111,
+      "tag": "template_or_example"
+    },
+    {
+      "files": 67,
+      "repository_groups": 8,
+      "tag": "mirror_or_vendor"
+    },
+    {
+      "files": 1209,
+      "repository_groups": 218,
+      "tag": "skill_plugin_or_agent"
+    },
+    {
+      "files": 1787,
+      "repository_groups": 294,
+      "tag": "package_app_or_component"
+    }
+  ],
+  "pointer_targets": [
+    {
+      "files": 2008,
+      "repeated_instances": 1505,
+      "repository_groups": 503,
+      "target_category": "agents_md",
+      "unique_contents": 103
+    },
+    {
+      "files": 25,
+      "repeated_instances": 14,
+      "repository_groups": 11,
+      "target_category": "claude_md",
+      "unique_contents": 11
+    },
+    {
+      "files": 150,
+      "repeated_instances": 99,
+      "repository_groups": 51,
+      "target_category": "mixed_md",
+      "unique_contents": 40
+    },
+    {
+      "files": 350,
+      "repeated_instances": 291,
+      "repository_groups": 59,
+      "target_category": "other_md",
+      "unique_contents": 43
+    },
+    {
+      "files": 4,
+      "repeated_instances": 3,
+      "repository_groups": 1,
+      "target_category": "other_path",
+      "unique_contents": 1
+    },
+    {
+      "files": 8,
+      "repeated_instances": 6,
+      "repository_groups": 2,
+      "target_category": "rules_file",
+      "unique_contents": 1
+    },
+    {
+      "files": 34,
+      "repeated_instances": 31,
+      "repository_groups": 3,
+      "target_category": "rules_md",
+      "unique_contents": 3
+    }
+  ],
+  "population": {
+    "audit_rows": 51,
+    "files": 5425,
+    "repeated_instances": 4152,
+    "repositories": 1107,
+    "repository_groups": 1273,
+    "unique_contents": 607
+  },
+  "scope": "exact-claude within-repository content hashes with two or more paths",
+  "size_bands": [
+    {
+      "size_band": "<=50",
+      "unique_content_share": 0.27677100494233936,
+      "unique_contents": 168
+    },
+    {
+      "size_band": "51-200",
+      "unique_content_share": 0.15485996705107083,
+      "unique_contents": 94
+    },
+    {
+      "size_band": "201-1000",
+      "unique_content_share": 0.29983525535420097,
+      "unique_contents": 182
+    },
+    {
+      "size_band": "1001-5000",
+      "unique_content_share": 0.15650741350906094,
+      "unique_contents": 95
+    },
+    {
+      "size_band": ">5000",
+      "unique_content_share": 0.11202635914332784,
+      "unique_contents": 68
+    }
+  ]
+}

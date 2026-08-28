@@ -1,0 +1,1064 @@
+{
+  "agents_target_basename_candidates": {
+    "content_identities": 3499,
+    "file_share_of_agents_import_files": 1.0,
+    "file_share_of_exact_claude_population": 0.061169,
+    "files": 6653,
+    "occurrences": 6726,
+    "repositories": 5322,
+    "residual_after_final_import_word_count_distribution": {
+      "count": 6653,
+      "maximum": 25735,
+      "mean": 110.818428,
+      "median": 0,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 20,
+      "p90": 165,
+      "p95": 419,
+      "p99": 1792
+    },
+    "residual_word_count_distribution": {
+      "count": 6653,
+      "maximum": 25735,
+      "mean": 123.532091,
+      "median": 3,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 36,
+      "p90": 185,
+      "p95": 466,
+      "p99": 1939
+    },
+    "residual_word_count_distribution_when_positive": {
+      "count": 4292,
+      "maximum": 25735,
+      "mean": 191.486253,
+      "median": 23,
+      "minimum": 1,
+      "p25": 3,
+      "p75": 67,
+      "p90": 343,
+      "p95": 804,
+      "p99": 4212
+    },
+    "target_form_counts": [
+      {
+        "occurrences": 5998,
+        "raw_token": "@AGENTS.md"
+      },
+      {
+        "occurrences": 220,
+        "raw_token": "@./AGENTS.md"
+      },
+      {
+        "occurrences": 179,
+        "raw_token": "@../AGENTS.md"
+      },
+      {
+        "occurrences": 41,
+        "raw_token": "@agents.md"
+      },
+      {
+        "occurrences": 19,
+        "raw_token": "@~/.agents/AGENTS.md"
+      },
+      {
+        "occurrences": 17,
+        "raw_token": "@AGENTS.MD"
+      },
+      {
+        "occurrences": 15,
+        "raw_token": "@.agents/AGENTS.md"
+      },
+      {
+        "occurrences": 11,
+        "raw_token": "@../.agents/AGENTS.md"
+      },
+      {
+        "occurrences": 11,
+        "raw_token": "@Agents.md"
+      },
+      {
+        "occurrences": 10,
+        "raw_token": "@../../AGENTS.md"
+      },
+      {
+        "occurrences": 10,
+        "raw_token": "@docs/AGENTS.md"
+      },
+      {
+        "occurrences": 10,
+        "raw_token": "@~/.codex/AGENTS.md"
+      },
+      {
+        "occurrences": 7,
+        "raw_token": "@~/.config/agents/AGENTS.md"
+      },
+      {
+        "occurrences": 6,
+        "raw_token": "@~/AGENTS.md"
+      },
+      {
+        "occurrences": 4,
+        "raw_token": "@./ai/AGENTS.md"
+      },
+      {
+        "occurrences": 4,
+        "raw_token": "@.github/agents.md"
+      },
+      {
+        "occurrences": 4,
+        "raw_token": "@~/.claude/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@../.codex/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@.agent/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@.claude/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@frontend/AGENTS.md"
+      },
+      {
+        "occurrences": 3,
+        "raw_token": "@~/.config/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@../../../../AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@../.config/opencode/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@../Extensions/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@./AGENTS.MD"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@.agents/agents.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@.github/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@.kb/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@/home/juanm/ais-os/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@/home/juanm/ais-os/universes/b2b-dev/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@backend/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@cella/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@docs/agents.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@ets_frontend/ets2panda/compiler/core/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@ets_frontend/ets2panda/parser/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@ets_frontend/ets2panda/public/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@workspace_root/AGENTS.md"
+      },
+      {
+        "occurrences": 2,
+        "raw_token": "@~/.config/opencode/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.agent/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.codex/agents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.config/ai/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.pdeq/design/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.pdeq/engineering/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.pdeq/product/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.pdeq/qa/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../.pdeq/roadmap/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../agents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../bektas-client/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../Doc/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../documentation/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../flexus-client-kit/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../knowledge/cockpit/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../MongoDB.EntityFrameworkCore.SpecificationTests/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../opencode/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../Serializers/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@../shared/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@./../../AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@./.claude-collective/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@./agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@./node_modules/@precisa-saude/agent-instructions/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.ai/spec/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.ai/specs/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.claude/context/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.claude/docs/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.claude/rules/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.clinerules/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.github/agents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.harness/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@.pdeq/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/aux/koutecky/logseq/tine-agents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/home/trev/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/Users/choco/.agent-context/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/Users/david/dotfiles/.claude/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/Users/memo/.agents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@/Users/scamden/.codex/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@agent_modules/@terrazul/tdd-engineer/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@agentics/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@AGENTs.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@agents/SDT-tech-lead/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@ai-project-architecture-guidance/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@ai/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@ai/profiles/karim/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@aletheia-probe/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@api/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@apps/functions/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@apps/mobile/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@apps/website/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/cmd/mcp-server/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/cmd/server/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/agent/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/agent/providers/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/api/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/api/handlers/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/api/middleware/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/config/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/storage/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/workflow/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@backend/internal/ws/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@bin/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@bindings/python/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@C:\\Users\\Admin\\Desktop\\vscode\\danf-skills\\AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@context/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@context/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@contexts/personal/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@contexts/projects-personal/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@contexts/work/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@core/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@deep_quoridor/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@deer-cli/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@deer-daemon/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@demo-server/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@docs-content/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@docs/agentes/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@docs/ai/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@docs/claude/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@documents/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@examples/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@frontend/src/api/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@gui/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@lares/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@openspec/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@order-core-service\\AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@packages/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@packages/shared/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@packages/tui/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@packages/wordpress-playground-block/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@plans/langfuse-integration/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@putitoutthere/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@reference/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@resources/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@rules/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@rules/common/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@scheduler\\AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@spec/agents.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@src/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@tests/integration/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@tickets/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@vibe-context/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@vibecoding_output/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@web/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@~/.agent/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@~/.config/ai/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@~/.dotfiles/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@~/code/jat/AGENTS.md"
+      },
+      {
+        "occurrences": 1,
+        "raw_token": "@~/dotfiles/opencode/AGENTS.md"
+      }
+    ]
+  },
+  "analysis": "CLAUDE.md AGENTS.md interoperability shims and overlays",
+  "analysis_version": "claude_agents_overlay_v1",
+  "artifact_rows": {
+    "files": 6653,
+    "sections": 313
+  },
+  "classification_cohorts": {
+    "at_least_one_residual_word": {
+      "content_identities": 3242,
+      "file_share_of_agents_import_files": 0.645123,
+      "file_share_of_exact_claude_population": 0.039462,
+      "files": 4292,
+      "repositories": 3729
+    },
+    "concrete_labeled_directive_candidate": {
+      "content_identities": 243,
+      "file_share_of_agents_import_files": 0.039832,
+      "file_share_of_exact_claude_population": 0.002436,
+      "files": 265,
+      "repositories": 259
+    },
+    "explicit_claude_labeled_section_after_final_import": {
+      "content_identities": 280,
+      "file_share_of_agents_import_files": 0.046145,
+      "file_share_of_exact_claude_population": 0.002823,
+      "files": 307,
+      "repositories": 295
+    },
+    "labeled_section_with_nonempty_body": {
+      "content_identities": 263,
+      "file_share_of_agents_import_files": 0.042988,
+      "file_share_of_exact_claude_population": 0.00263,
+      "files": 286,
+      "repositories": 277
+    },
+    "labeled_section_with_placeholder_language": {
+      "content_identities": 8,
+      "file_share_of_agents_import_files": 0.001353,
+      "file_share_of_exact_claude_population": 8.3e-05,
+      "files": 9,
+      "repositories": 8
+    },
+    "no_residual_outside_html_comments": {
+      "content_identities": 248,
+      "file_share_of_agents_import_files": 0.352923,
+      "file_share_of_exact_claude_population": 0.021588,
+      "files": 2348,
+      "repositories": 1612
+    },
+    "strict_import_only": {
+      "content_identities": 126,
+      "file_share_of_agents_import_files": 0.307681,
+      "file_share_of_exact_claude_population": 0.018821,
+      "files": 2047,
+      "repositories": 1423
+    },
+    "substantive_residual": {
+      "content_identities": 2284,
+      "file_share_of_agents_import_files": 0.40012,
+      "file_share_of_exact_claude_population": 0.024475,
+      "files": 2662,
+      "repositories": 2411
+    },
+    "substantive_residual_after_final_import": {
+      "content_identities": 1749,
+      "file_share_of_agents_import_files": 0.301368,
+      "file_share_of_exact_claude_population": 0.018434,
+      "files": 2005,
+      "repositories": 1832
+    }
+  },
+  "database": {
+    "path": "mined.db",
+    "sha256_after": "29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442",
+    "sha256_before": "29bca85a0b5a9d9cf953461b0c0e2c90f7b8cf6855623ceb6e06eb9be2cb8442",
+    "sha256_unchanged": true,
+    "sqlite_library_version": "3.49.1",
+    "sqlite_total_changes": 0
+  },
+  "documentation_basis": {
+    "accessed": "2026-07-29",
+    "url": "https://code.claude.com/docs/en/memory#import-additional-files"
+  },
+  "exact_literal_at_agents_subset": {
+    "concrete_labeled_directive_candidate": {
+      "content_identities": 231,
+      "file_share_of_literal_subset": 0.041723,
+      "files": 249,
+      "repositories": 244
+    },
+    "content_identities": 3189,
+    "explicit_claude_labeled_section_after_final_import": {
+      "content_identities": 264,
+      "file_share_of_literal_subset": 0.04809,
+      "files": 287,
+      "repositories": 276
+    },
+    "file_share_of_literal_subset": 1.0,
+    "files": 5968,
+    "occurrences": 5998,
+    "repositories": 4862,
+    "strict_import_only": {
+      "content_identities": 33,
+      "file_share_of_literal_subset": 0.272453,
+      "files": 1626,
+      "repositories": 1188
+    },
+    "substantive_residual": {
+      "content_identities": 2160,
+      "file_share_of_literal_subset": 0.423425,
+      "files": 2527,
+      "repositories": 2296
+    },
+    "substantive_residual_after_final_import": {
+      "content_identities": 1663,
+      "file_share_of_literal_subset": 0.320208,
+      "files": 1911,
+      "repositories": 1749
+    }
+  },
+  "exclusive_residual_partition": {
+    "at_least_one_residual_word": 4292,
+    "imports_plus_html_comments_only": 301,
+    "markup_or_punctuation_only_residual": 13,
+    "strict_import_only": 2047,
+    "sum": 6653
+  },
+  "explicit_overlay_sections": {
+    "concrete_directive_candidate_sections": 269,
+    "content_identities": 280,
+    "files": 307,
+    "label_kind_counts": {
+      "explicit_specificity_or_adapter": 187,
+      "instruction_or_workflow": 46,
+      "notes_configuration_or_context": 80
+    },
+    "leading_normalized_headings": [
+      {
+        "heading": "claude-specific notes",
+        "sections": 45
+      },
+      {
+        "heading": "claude code notes",
+        "sections": 34
+      },
+      {
+        "heading": "claude-specific",
+        "sections": 16
+      },
+      {
+        "heading": "claude code specific",
+        "sections": 13
+      },
+      {
+        "heading": "claude code specific instructions",
+        "sections": 9
+      },
+      {
+        "heading": "claude code instructions",
+        "sections": 9
+      },
+      {
+        "heading": "claude-specific instructions",
+        "sections": 8
+      },
+      {
+        "heading": "claude code-specific notes",
+        "sections": 8
+      },
+      {
+        "heading": "claude notes",
+        "sections": 5
+      },
+      {
+        "heading": "claude code specific notes",
+        "sections": 5
+      },
+      {
+        "heading": "claude code workflow",
+        "sections": 5
+      },
+      {
+        "heading": "claude instructions — plugin project",
+        "sections": 5
+      },
+      {
+        "heading": "claude code configuration",
+        "sections": 5
+      },
+      {
+        "heading": "claude code adapter",
+        "sections": 4
+      },
+      {
+        "heading": "claude adapter notes",
+        "sections": 4
+      },
+      {
+        "heading": "claude code only",
+        "sections": 4
+      },
+      {
+        "heading": "claude code-specific",
+        "sections": 4
+      },
+      {
+        "heading": "claude instructions",
+        "sections": 3
+      },
+      {
+        "heading": "notes for claude code",
+        "sections": 3
+      },
+      {
+        "heading": "claude code specific workflows",
+        "sections": 3
+      },
+      {
+        "heading": "claude-specific routing",
+        "sections": 3
+      },
+      {
+        "heading": "claude-specific configuration",
+        "sections": 3
+      },
+      {
+        "heading": "claude code addenda",
+        "sections": 3
+      },
+      {
+        "heading": "claude code-specific instructions",
+        "sections": 3
+      },
+      {
+        "heading": "claude-specific tips",
+        "sections": 2
+      },
+      {
+        "heading": "claude-specific settings",
+        "sections": 2
+      },
+      {
+        "heading": "claude-specific additions",
+        "sections": 2
+      },
+      {
+        "heading": "(optional) claude-only notes",
+        "sections": 2
+      },
+      {
+        "heading": "claude-specific note",
+        "sections": 2
+      },
+      {
+        "heading": "claude-specific workflow",
+        "sections": 2
+      },
+      {
+        "heading": "claude code operating notes",
+        "sections": 2
+      },
+      {
+        "heading": "claude-specific rules",
+        "sections": 2
+      },
+      {
+        "heading": "notes for claude",
+        "sections": 2
+      },
+      {
+        "heading": "claude code specific settings",
+        "sections": 2
+      },
+      {
+        "heading": "claude-only notes",
+        "sections": 2
+      },
+      {
+        "heading": "claude command examples",
+        "sections": 1
+      },
+      {
+        "heading": "claude code note",
+        "sections": 1
+      },
+      {
+        "heading": "claude code - specific instructions",
+        "sections": 1
+      },
+      {
+        "heading": "claude code — additions",
+        "sections": 1
+      },
+      {
+        "heading": "anıkare — project context for claude",
+        "sections": 1
+      },
+      {
+        "heading": "claude agent guidance - specatlas",
+        "sections": 1
+      },
+      {
+        "heading": "claude.md — frontend website rules",
+        "sections": 1
+      },
+      {
+        "heading": "claude code orchestration manager v2",
+        "sections": 1
+      },
+      {
+        "heading": "claude adapter surface",
+        "sections": 1
+      },
+      {
+        "heading": "claude code notes / claude code向け補足",
+        "sections": 1
+      },
+      {
+        "heading": "model routing policy (claude-specific)",
+        "sections": 1
+      },
+      {
+        "heading": "claude code-specific overrides",
+        "sections": 1
+      },
+      {
+        "heading": "claude workflow",
+        "sections": 1
+      },
+      {
+        "heading": "claude context",
+        "sections": 1
+      },
+      {
+        "heading": "claude code session rules",
+        "sections": 1
+      }
+    ],
+    "overlapping_lexical_theme_signals": {
+      "claude_configuration_paths": {
+        "files": 93,
+        "repositories": 90,
+        "sections": 96
+      },
+      "hooks": {
+        "files": 39,
+        "repositories": 39,
+        "sections": 39
+      },
+      "mcp": {
+        "files": 28,
+        "repositories": 27,
+        "sections": 28
+      },
+      "model_selection": {
+        "files": 25,
+        "repositories": 25,
+        "sections": 25
+      },
+      "permissions_or_safety": {
+        "files": 38,
+        "repositories": 38,
+        "sections": 39
+      },
+      "plan_mode": {
+        "files": 25,
+        "repositories": 25,
+        "sections": 25
+      },
+      "review_commit_or_pull_request": {
+        "files": 76,
+        "repositories": 76,
+        "sections": 76
+      },
+      "skills_or_slash_commands": {
+        "files": 141,
+        "repositories": 138,
+        "sections": 143
+      },
+      "subagents_or_delegation": {
+        "files": 60,
+        "repositories": 60,
+        "sections": 61
+      }
+    },
+    "placeholder_language_sections": 10,
+    "repositories": 295,
+    "sections": 313
+  },
+  "import_detector_version": "phase2r_at_path_v1",
+  "invariants": {
+    "every_output_file_has_an_active_agents_target": true,
+    "exclusive_residual_partition_matches_candidate_files": true,
+    "section_rows_match_file_section_counts": true
+  },
+  "limitations": [
+    "An import-syntax candidate does not establish that AGENTS.md exists, was approved, recursively expanded, or loaded at runtime.",
+    "The ten-word substantive threshold is an operational sensitivity cutoff, not a semantic boundary.",
+    "HTML comments are excluded only for this residual-text measure; the analysis does not claim that comments are absent from model context.",
+    "The explicit-heading detector is lexical and primarily English-oriented; unlabeled and non-English Claude-specific overlays can be missed.",
+    "The directive and placeholder rules are audit aids rather than validated semantic labels and can produce false positives or false negatives.",
+    "File counts are copy-weighted; repository and content-identity counts are reported alongside them to expose duplication."
+  ],
+  "operational_definitions": {
+    "agents_import": "Phase 2r active @path syntax candidate whose case-insensitive target basename is AGENTS.md",
+    "concrete_labeled_directive_candidate": "an explicit labeled section has the configured minimum body words, an English directive cue, and no recognized placeholder",
+    "explicit_claude_labeled_section_after_final_import": "an ATX or Setext heading after the final import contains an explicit Claude/Claude Code term and an overlay cue such as specific, instructions, workflow, notes, adapter, or context",
+    "no_residual_outside_html_comments": "after removing active imports and HTML comments, only a BOM and whitespace remain",
+    "strict_import_only": "removing all active AGENTS.md import tokens leaves only a BOM and whitespace",
+    "substantive_residual": "at least 10 residual word tokens after active imports and HTML comments are removed",
+    "substantive_residual_after_final_import": "at least 10 word tokens occur after the final active AGENTS.md import, excluding HTML comments"
+  },
+  "parameters": {
+    "exact_literal_definition": "raw active token exactly @AGENTS.md",
+    "minimum_section_body_words": 3,
+    "substantive_word_threshold": 10,
+    "word_definition": "Unicode alphanumeric runs, optionally joined internally by apostrophes or hyphens; underscores are separators"
+  },
+  "population_definition": "files whose stored POSIX path has a case-insensitive basename equal to CLAUDE.md",
+  "source_population": {
+    "content_identities": 95585,
+    "files": 108764,
+    "repositories": 92238
+  }
+}

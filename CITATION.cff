@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite the accompanying paper."
+type: software
+title: "Replication package for Dear Claude, Read This First"
+authors:
+  - family-names: de Lara
+    given-names: Juan
+  - family-names: Guerra
+    given-names: Esther
+abstract: >-
+  Code, fixed inputs, and documentation used to reproduce the analyses in
+  Dear Claude, Read This First: A Large-scale Study of Repository-Level
+  Instructions for AI Coding Agents.
+

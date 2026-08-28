@@ -1,0 +1,16 @@
+rank,repository,stars,language
+1,openclaw/openclaw,383467,TypeScript
+2,vinta/awesome-python,309658,Python
+3,react/react,246615,JavaScript
+4,affaan-m/ECC,231842,JavaScript
+5,Significant-Gravitas/AutoGPT,185607,Python
+6,firecrawl/firecrawl,152208,TypeScript
+7,langflow-ai/langflow,152154,Python
+8,microsoft/PowerToys,136568,C
+9,garrytan/gstack,123366,TypeScript
+10,microsoft/TypeScript,109884,TypeScript
+11,supabase/supabase,106783,TypeScript
+12,pytorch/pytorch,101841,Python
+13,mui/material-ui,98608,JavaScript
+14,oven-sh/bun,94930,Rust
+15,modelcontextprotocol/servers,88796,TypeScript

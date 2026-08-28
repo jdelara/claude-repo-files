@@ -1,0 +1,16 @@
+{
+  "analyzed_files": 108764,
+  "block_count_mismatches": 0,
+  "files_with_code_block_share": 0.5167426722077157,
+  "files_with_code_blocks": 56203,
+  "normalized_groups": 398,
+  "raw_labels": 417,
+  "scope": "exact-claude",
+  "scope_definition": "case-insensitive basename equal to CLAUDE.md",
+  "scoped_files": 108764,
+  "tagged_code_block_share": 0.7453257232828183,
+  "tagged_code_blocks": 219646,
+  "total_code_blocks": 294698,
+  "untagged_code_block_share": 0.2546742767171817,
+  "untagged_code_blocks": 75052
+}

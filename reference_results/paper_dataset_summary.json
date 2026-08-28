@@ -1,0 +1,216 @@
+{
+  "analysis": "paper dataset, repository, and exact-file size statistics",
+  "database": {
+    "access": "SQLite mode=ro&immutable=1 with PRAGMA query_only=ON",
+    "path": "mined.db"
+  },
+  "definitions": {
+    "estimated_tokens": "ceil(character_count / 3.5) per file",
+    "paper_file_population": "stored POSIX path has a case-insensitive basename equal to CLAUDE.md",
+    "quantiles": "empirical nearest-rank",
+    "repository_language": "GitHub primary language stored in the repos table",
+    "repository_stars": "stored GitHub stargazer count; missing values treated as zero",
+    "strict_case_population": "stored basename is exactly CLAUDE.md"
+  },
+  "exact_file_size": {
+    "bytes": {
+      "count": 108764,
+      "max": 357764,
+      "mean": 7406.611948806591,
+      "median": 2540,
+      "min": 3,
+      "p25": 553,
+      "p75": 6652,
+      "p90": 13838,
+      "p95": 37541,
+      "p99": 80230,
+      "total": 805572742,
+      "zero": 0
+    },
+    "characters": {
+      "count": 108764,
+      "max": 353727,
+      "mean": 7069.409207090582,
+      "median": 2396,
+      "min": 2,
+      "p25": 520,
+      "p75": 6276,
+      "p90": 13432,
+      "p95": 35491,
+      "p99": 77611,
+      "total": 768897223,
+      "zero": 0
+    },
+    "estimated_tokens": {
+      "count": 108764,
+      "max": 101065,
+      "mean": 2020.2652532087823,
+      "median": 685,
+      "min": 1,
+      "p25": 149,
+      "p75": 1794,
+      "p90": 3838,
+      "p95": 10141,
+      "p99": 22175,
+      "total": 219732130,
+      "zero": 0
+    },
+    "lines": {
+      "count": 108764,
+      "max": 19662,
+      "mean": 139.0773785443713,
+      "median": 57,
+      "min": 1,
+      "p25": 14,
+      "p75": 135,
+      "p90": 311,
+      "p95": 521,
+      "p99": 1469,
+      "total": 15126612,
+      "zero": 0
+    },
+    "words": {
+      "count": 108764,
+      "max": 49269,
+      "mean": 924.7409712772609,
+      "median": 327,
+      "min": 0,
+      "p25": 72,
+      "p75": 831,
+      "p90": 1785,
+      "p95": 4436,
+      "p99": 9929,
+      "total": 100578527,
+      "zero": 3
+    }
+  },
+  "file_populations": {
+    "all_query_matches": {
+      "files": 115779,
+      "repositories": 96235
+    },
+    "case_insensitive_exact_claude": {
+      "files": 108764,
+      "repositories": 92238
+    },
+    "nonexact_query_matches": {
+      "files": 7015,
+      "repositories": 4659
+    },
+    "strict_case_exact_claude": {
+      "files": 103537,
+      "repositories": 88189
+    }
+  },
+  "repositories": {
+    "count": 96235,
+    "languages_known": 92390,
+    "languages_unknown": 3845,
+    "stars": {
+      "count": 96235,
+      "max": 383467,
+      "mean": 127.8954018808126,
+      "median": 0,
+      "min": 0,
+      "p25": 0,
+      "p75": 1,
+      "p90": 10,
+      "p95": 50,
+      "p99": 1349,
+      "total": 12308014,
+      "zero": 61901
+    },
+    "top_15_by_stars": [
+      {
+        "language": "TypeScript",
+        "rank": 1,
+        "repository": "openclaw/openclaw",
+        "stars": 383467
+      },
+      {
+        "language": "Python",
+        "rank": 2,
+        "repository": "vinta/awesome-python",
+        "stars": 309658
+      },
+      {
+        "language": "JavaScript",
+        "rank": 3,
+        "repository": "react/react",
+        "stars": 246615
+      },
+      {
+        "language": "JavaScript",
+        "rank": 4,
+        "repository": "affaan-m/ECC",
+        "stars": 231842
+      },
+      {
+        "language": "Python",
+        "rank": 5,
+        "repository": "Significant-Gravitas/AutoGPT",
+        "stars": 185607
+      },
+      {
+        "language": "TypeScript",
+        "rank": 6,
+        "repository": "firecrawl/firecrawl",
+        "stars": 152208
+      },
+      {
+        "language": "Python",
+        "rank": 7,
+        "repository": "langflow-ai/langflow",
+        "stars": 152154
+      },
+      {
+        "language": "C",
+        "rank": 8,
+        "repository": "microsoft/PowerToys",
+        "stars": 136568
+      },
+      {
+        "language": "TypeScript",
+        "rank": 9,
+        "repository": "garrytan/gstack",
+        "stars": 123366
+      },
+      {
+        "language": "TypeScript",
+        "rank": 10,
+        "repository": "microsoft/TypeScript",
+        "stars": 109884
+      },
+      {
+        "language": "TypeScript",
+        "rank": 11,
+        "repository": "supabase/supabase",
+        "stars": 106783
+      },
+      {
+        "language": "Python",
+        "rank": 12,
+        "repository": "pytorch/pytorch",
+        "stars": 101841
+      },
+      {
+        "language": "JavaScript",
+        "rank": 13,
+        "repository": "mui/material-ui",
+        "stars": 98608
+      },
+      {
+        "language": "Rust",
+        "rank": 14,
+        "repository": "oven-sh/bun",
+        "stars": 94930
+      },
+      {
+        "language": "TypeScript",
+        "rank": 15,
+        "repository": "modelcontextprotocol/servers",
+        "stars": 88796
+      }
+    ]
+  }
+}
